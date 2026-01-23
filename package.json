@@ -9,9 +9,14 @@
     "server": "node server/index.js",
     "client": "cd client && npm run dev",
     "db:init": "node server/database/init.js",
+    "build": "cd client && npm run build",
     "start": "npm run server"
   },
-  "keywords": ["pos", "restaurant", "mock"],
+  "keywords": [
+    "pos",
+    "restaurant",
+    "mock"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {

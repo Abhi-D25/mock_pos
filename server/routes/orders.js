@@ -8,11 +8,12 @@ import {
   getOrderStats
 } from '../services/orderService.js';
 import { notifyNewOrder, notifyOrderUpdate } from '../services/websocket.js';
+import { authenticateApiKey } from '../middleware/auth.js';
 
 const router = express.Router();
 
-// POST /api/orders - Create new order
-router.post('/', async (req, res) => {
+// POST /api/orders - Create new order (Protected)
+router.post('/', authenticateApiKey, async (req, res) => {
   try {
     const orderData = req.body;
 
@@ -70,8 +71,8 @@ router.post('/', async (req, res) => {
   }
 });
 
-// GET /api/orders - List orders
-router.get('/', (req, res) => {
+// GET /api/orders - List orders (Protected)
+router.get('/', authenticateApiKey, (req, res) => {
   try {
     const filters = {
       status: req.query.status,
@@ -98,8 +99,8 @@ router.get('/', (req, res) => {
   }
 });
 
-// GET /api/orders/stats - Get order statistics
-router.get('/stats', (req, res) => {
+// GET /api/orders/stats - Get order statistics (Protected)
+router.get('/stats', authenticateApiKey, (req, res) => {
   try {
     const stats = getOrderStats();
     res.json({
@@ -142,8 +143,8 @@ router.get('/:id', (req, res) => {
   }
 });
 
-// PUT /api/orders/:id - Update order
-router.put('/:id', (req, res) => {
+// PUT /api/orders/:id - Update order (Protected)
+router.put('/:id', authenticateApiKey, (req, res) => {
   try {
     const updates = req.body;
     const order = updateOrder(req.params.id, updates);
@@ -172,8 +173,8 @@ router.put('/:id', (req, res) => {
   }
 });
 
-// DELETE /api/orders/:id - Cancel order
-router.delete('/:id', (req, res) => {
+// DELETE /api/orders/:id - Cancel order (Protected)
+router.delete('/:id', authenticateApiKey, (req, res) => {
   try {
     const order = cancelOrder(req.params.id);
 

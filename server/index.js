@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { createServer } from 'http';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 import { initWebSocket, getConnectionStats } from './services/websocket.js';
 import { authenticateApiKey } from './middleware/auth.js';
 import ordersRouter from './routes/orders.js';
@@ -9,6 +11,9 @@ import paymentsRouter from './routes/payments.js';
 import menuRouter from './routes/menu.js';
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -37,18 +42,18 @@ app.get('/health', (req, res) => {
   });
 });
 
-// API routes (with auth)
-app.use('/api/orders', authenticateApiKey, ordersRouter);
+// API routes (with auth handled inside routes for granular control)
+app.use('/api/orders', ordersRouter);
 app.use('/api/payments', paymentsRouter); // Payment page is public
 app.use('/api/menu', menuRouter); // Menu is public
 
-// 404 handler
-app.use((req, res) => {
-  res.status(404).json({
-    success: false,
-    error: 'Endpoint not found',
-    path: req.path
-  });
+// Serve static files from the React app (built frontend)
+const clientBuildPath = join(__dirname, '../client/dist');
+app.use(express.static(clientBuildPath));
+
+// Serve React app for all non-API routes (SPA fallback)
+app.get('*', (req, res) => {
+  res.sendFile(join(clientBuildPath, 'index.html'));
 });
 
 // Error handler
