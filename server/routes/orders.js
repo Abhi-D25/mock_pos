@@ -9,6 +9,7 @@ import {
 } from '../services/orderService.js';
 import { notifyNewOrder, notifyOrderUpdate } from '../services/websocket.js';
 import { authenticateApiKey } from '../middleware/auth.js';
+import { enrichOrderItems, calculateTotals, getTaxRate } from '../services/menuService.js';
 
 const router = express.Router();
 
@@ -39,8 +40,29 @@ router.post('/', authenticateApiKey, async (req, res) => {
       });
     }
 
+    // Enrich items with prices from menu
+    console.log('[Orders API] Enriching order items with menu prices...');
+    const { items: enrichedItems, warnings } = enrichOrderItems(orderData.items);
+
+    // Calculate totals using enriched items
+    const taxRate = orderData.tax_rate || getTaxRate();
+    const totals = calculateTotals(enrichedItems, taxRate);
+
+    // Update order data with enriched items and calculated totals
+    const enrichedOrderData = {
+      ...orderData,
+      items: enrichedItems,
+      tax_rate: taxRate,
+      ...totals
+    };
+
+    // Log warnings if any items weren't found
+    if (warnings.length > 0) {
+      console.warn('[Orders API] Menu matching warnings:', warnings);
+    }
+
     // Create order
-    const order = createOrder(orderData);
+    const order = createOrder(enrichedOrderData);
 
     // Notify WebSocket clients
     notifyNewOrder(order);
@@ -53,13 +75,15 @@ router.post('/', authenticateApiKey, async (req, res) => {
       order: {
         order_id: order.id,
         status: order.status,
+        items: order.items,
         subtotal: order.subtotal,
         tax_rate: order.tax_rate,
         tax_amount: order.tax_amount,
         total: order.total,
         payment_url: paymentUrl,
         created_at: order.created_at
-      }
+      },
+      warnings: warnings.length > 0 ? warnings : undefined
     });
   } catch (error) {
     console.error('Error creating order:', error);

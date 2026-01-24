@@ -7,472 +7,2911 @@
   },
   "categories": [
     {
-      "id": "dim_sum",
-      "name": "Dim Sum",
-      "items": [
-        {"id": "ds_001", "name": "MingHin Shrimp Dumpling", "price": 8.55, "modifiers": []},
-        {"id": "ds_002", "name": "Siu Mai", "description": "Pork and Shrimp", "price": 7.65, "modifiers": []},
-        {"id": "ds_003", "name": "Shrimp Dumpling with Pea Tip", "price": 8.55, "modifiers": []},
-        {"id": "ds_004", "name": "Country Style Dumpling", "price": 7.65, "modifiers": []},
-        {"id": "ds_005", "name": "Shrimp Dumpling with Green Chive", "price": 8.55, "modifiers": []},
-        {"id": "ds_006", "name": "Stuffed Tofu Skin with Pork and Shrimp", "price": 7.65, "modifiers": []},
-        {"id": "ds_007", "name": "Spare Ribs w/ Black Bean Sauce", "price": 7.65, "modifiers": []},
-        {"id": "ds_008", "name": "Chicken Feet with Special Sauce", "price": 7.65, "modifiers": []},
-        {"id": "ds_009", "name": "Beef Tripe with Ginger and Scallion", "price": 7.65, "modifiers": []},
-        {"id": "ds_010", "name": "Baby Cuttlefish w/ Curry Sauce", "price": 8.55, "modifiers": []},
-        {"id": "ds_011", "name": "Stuffed Sticky Rice in Lotus Leaf", "price": 8.55, "modifiers": []},
-        {"id": "ds_012", "name": "Short Rib w/ Pepper Sauce", "price": 8.55, "modifiers": []},
-        {"id": "ds_013", "name": "Beef Brisket", "price": 10.20, "modifiers": []},
-        {"id": "ds_014", "name": "Pan-Fried Turnip Cake", "price": 7.65, "modifiers": []},
-        {"id": "ds_015", "name": "Pan-Fried Water Chestnut Cake", "price": 6.55, "modifiers": []},
-        {"id": "ds_016", "name": "Pan-Fried Shredded Taro Cake", "price": 6.55, "modifiers": []},
-        {"id": "ds_017", "name": "Pan-Fried Corn and Pork Cake", "price": 7.65, "modifiers": []},
-        {"id": "ds_018", "name": "Pan-Fried Green Chive Cake", "price": 7.65, "modifiers": []},
-        {"id": "ds_019", "name": "Pan-Fried Potsticker", "price": 7.65, "modifiers": []},
-        {"id": "ds_020", "name": "Short Rib with Honey Sauce", "price": 10.20, "modifiers": []},
-        {"id": "ds_021", "name": "Deep Fried Spring Roll", "price": 7.65, "modifiers": []},
-        {"id": "ds_022", "name": "Pan-Fried Vegetable Roll", "price": 7.65, "modifiers": []},
-        {"id": "ds_023", "name": "Deep Fried Shrimp Roll", "price": 8.55, "modifiers": []},
-        {"id": "ds_024", "name": "Deep Fried Sesame Ball", "price": 6.55, "modifiers": []},
-        {"id": "ds_025", "name": "Steamed Egg Yolk Paste Bun", "price": 7.65, "modifiers": []},
-        {"id": "ds_026", "name": "Steamed Lotus Seed Paste Bun", "price": 7.65, "modifiers": []},
-        {"id": "ds_027", "name": "Steamed BBQ Pork Bun", "price": 7.65, "modifiers": []},
-        {"id": "ds_028", "name": "Steamed Chicken and Dried Scallop Bun", "price": 8.55, "modifiers": []},
-        {"id": "ds_029", "name": "Steamed Beef Crepe", "price": 7.65, "modifiers": []},
-        {"id": "ds_030", "name": "Steamed Vegetable Crepe", "price": 7.65, "modifiers": []},
-        {"id": "ds_031", "name": "Steamed BBQ Pork Crepe", "price": 7.65, "modifiers": []},
-        {"id": "ds_032", "name": "Steamed Shrimp Crepe", "price": 8.55, "modifiers": []},
-        {"id": "ds_033", "name": "Steamed Plain Rice Crepe", "price": 6.55, "modifiers": []},
-        {"id": "ds_034", "name": "Rice Crepe w/ Deep Fried Chinese Donut", "price": 7.65, "modifiers": []},
-        {"id": "ds_035", "name": "Pork w/ Preserved Egg Congee", "price": 7.65, "modifiers": []},
-        {"id": "ds_036", "name": "Salty Pork Bone w/ Dried Vegetable Congee", "price": 8.55, "modifiers": []},
-        {"id": "ds_037", "name": "Mini Sweet Custard Roll", "price": 6.55, "modifiers": []},
-        {"id": "ds_038", "name": "Baked BBQ Pork Turnover", "price": 7.65, "modifiers": []},
-        {"id": "ds_039", "name": "Baked Creamy Egg Yolk Bun", "price": 8.55, "modifiers": []},
-        {"id": "ds_040", "name": "Baked BBQ Pork Bun", "price": 7.65, "modifiers": []},
-        {"id": "ds_041", "name": "Puffy Egg Custard Tart", "price": 7.65, "modifiers": []},
-        {"id": "ds_042", "name": "Puffy Egg Custard Tart Platter", "description": "Three flavours: original, mango, and green tea", "price": 7.65, "modifiers": []},
-        {"id": "ds_043", "name": "Mango Pudding", "price": 7.65, "modifiers": []},
-        {"id": "ds_044", "name": "Red Bean Pudding", "price": 6.55, "modifiers": []},
-        {"id": "ds_045", "name": "Coconut Pudding", "price": 6.55, "modifiers": []},
-        {"id": "ds_046", "name": "Chinese Broccoli w/ Oyster Sauce", "price": 10.20, "modifiers": []},
-        {"id": "ds_047", "name": "U Choy Sum w/ Oyster Sauce", "price": 10.20, "modifiers": []},
-        {"id": "ds_048", "name": "Lettuce w/ Oyster Sauce", "price": 10.20, "modifiers": []},
-        {"id": "ds_049", "name": "Chilled Jellyfish", "price": 10.20, "modifiers": []},
-        {"id": "ds_050", "name": "Bean Jelly", "price": 10.20, "modifiers": []},
-        {"id": "ds_051", "name": "Spicy Beef Tripe Slices", "price": 10.20, "modifiers": []},
-        {"id": "ds_052", "name": "BBQ Pork", "price": 10.20, "modifiers": []},
-        {"id": "ds_053", "name": "Crispy Pork Belly Macau Style", "price": 10.20, "modifiers": []},
-        {"id": "ds_054", "name": "BBQ Spare Ribs", "price": 10.20, "modifiers": []},
-        {"id": "ds_055", "name": "Roast Duck", "price": 10.20, "modifiers": []}
-      ]
-    },
-    {
       "id": "appetizers",
       "name": "Appetizers",
       "items": [
-        {"id": "app_001", "name": "Chicken on a Stick", "price": 9.85, "modifiers": []},
-        {"id": "app_002", "name": "Beef on a Stick", "price": 9.85, "modifiers": []},
-        {"id": "app_003", "name": "Egg Rolls", "description": "2 rolls", "price": 5.50, "modifiers": []},
-        {"id": "app_004", "name": "Crab Rangoon", "description": "4 pieces", "price": 8.25, "modifiers": []},
-        {"id": "app_005", "name": "Potstickers", "description": "6 pieces", "price": 8.75, "modifiers": []},
-        {"id": "app_006", "name": "Deep Fried Chicken Wings", "description": "8 pieces", "price": 9.85, "modifiers": []},
-        {"id": "app_007", "name": "Japanese Seaweed Salad", "price": 9.85, "modifiers": []},
-        {"id": "app_008", "name": "Cucumber Salad", "price": 8.00, "modifiers": []},
-        {"id": "app_009", "name": "Deep Fried Huajuan", "description": "4 pieces", "price": 8.25, "modifiers": []},
-        {"id": "app_010", "name": "Vegetable Egg Rolls", "description": "2 rolls", "price": 5.50, "modifiers": []},
-        {"id": "app_011", "name": "Marinated Jellyfish", "price": 10.40, "modifiers": []}
+        {
+          "id": "app_001",
+          "name": "Crab Rangoon",
+          "description": "4 pieces",
+          "price": 7.50,
+          "modifiers": []
+        },
+        {
+          "id": "app_002",
+          "name": "Egg Roll",
+          "description": "2 pieces",
+          "price": 5.25,
+          "modifiers": []
+        },
+        {
+          "id": "app_003",
+          "name": "Vegetable Egg Roll",
+          "description": "2 pieces",
+          "price": 5.25,
+          "modifiers": []
+        },
+        {
+          "id": "app_004",
+          "name": "Pot Sticker",
+          "description": "6 pieces",
+          "price": 7.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_005",
+          "name": "Cucumber Salad",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "app_006",
+          "name": "Chicken on a Stick",
+          "description": "4 pieces",
+          "price": 8.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_007",
+          "name": "Beef on a Stick",
+          "description": "4 pieces",
+          "price": 8.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_008",
+          "name": "Deep Fried Chicken Wings",
+          "price": 8.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_009",
+          "name": "Deep Fried Huajuan",
+          "description": "4 pieces",
+          "price": 6.00,
+          "modifiers": []
+        },
+        {
+          "id": "app_010",
+          "name": "Marinated Jellyfish",
+          "price": 11.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_011",
+          "name": "Japanese Seaweed",
+          "price": 8.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_012",
+          "name": "Deep Fried Stuffed Crab Claw",
+          "description": "2 pieces",
+          "price": 12.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_013",
+          "name": "Deep Fried Wonton",
+          "description": "6 pieces",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "app_014",
+          "name": "Duck Salad",
+          "price": 8.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_015",
+          "name": "Pork Hock with Rice Wine",
+          "price": 8.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_016",
+          "name": "Homemade Cuttlefish Ball",
+          "price": 8.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_017",
+          "name": "Cuttlefish Roll",
+          "price": 9.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_018",
+          "name": "Sea Eel with Honey Sauce",
+          "price": 12.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_019",
+          "name": "Beef Hind Shank with Five Spice",
+          "price": 8.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_020",
+          "name": "Deep Fried Shrimp Ball",
+          "description": "4 pieces",
+          "price": 10.95,
+          "modifiers": []
+        },
+        {
+          "id": "app_021",
+          "name": "Salt and Pepper Vegetable",
+          "price": 7.25,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "soup",
       "name": "Soup",
       "items": [
-        {"id": "soup_001", "name": "Hot and Sour Soup", "price": 6.55, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Small", "price": 0}, {"name": "Large", "price": 4.00}]}]},
-        {"id": "soup_002", "name": "Wonton Soup", "price": 6.55, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Small", "price": 0}, {"name": "Large", "price": 4.00}]}]},
-        {"id": "soup_003", "name": "Tofu with Mixed Vegetable Soup", "price": 6.55, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Small", "price": 0}, {"name": "Large", "price": 4.00}]}]},
-        {"id": "soup_004", "name": "Egg Drop Soup with Straw Mushroom", "price": 6.55, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Small", "price": 0}, {"name": "Large", "price": 4.00}]}]},
-        {"id": "soup_005", "name": "West Lake Minced Beef Soup", "price": 6.55, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Small", "price": 0}, {"name": "Large", "price": 4.00}]}]},
-        {"id": "soup_006", "name": "Chicken Corn Soup", "price": 6.55, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Small", "price": 0}, {"name": "Large", "price": 4.00}]}]},
-        {"id": "soup_007", "name": "Crab Meat Corn Soup", "price": 8.25, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Small", "price": 0}, {"name": "Large", "price": 4.00}]}]},
-        {"id": "soup_008", "name": "Creamy King Crab Meat with Fish Maw Soup", "price": 8.25, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Small", "price": 0}, {"name": "Large", "price": 4.00}]}]},
-        {"id": "soup_009", "name": "Seafood with Tofu Soup", "price": 7.15, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Small", "price": 0}, {"name": "Large", "price": 4.00}]}]}
+        {
+          "id": "soup_001",
+          "name": "Wonton Soup",
+          "price": 6.45,
+          "modifiers": []
+        },
+        {
+          "id": "soup_002",
+          "name": "Hot and Sour Soup",
+          "price": 6.45,
+          "modifiers": []
+        },
+        {
+          "id": "soup_003",
+          "name": "Egg Drop Soup with Mushroom",
+          "price": 6.45,
+          "modifiers": []
+        },
+        {
+          "id": "soup_004",
+          "name": "Tofu with Mixed Vegetable Soup",
+          "price": 6.45,
+          "modifiers": []
+        },
+        {
+          "id": "soup_005",
+          "name": "West Lake Minced Beef Soup",
+          "price": 6.45,
+          "modifiers": []
+        },
+        {
+          "id": "soup_006",
+          "name": "Chicken Corn Soup",
+          "price": 6.45,
+          "modifiers": []
+        },
+        {
+          "id": "soup_007",
+          "name": "Crab Meat Corn Soup",
+          "price": 8.00,
+          "modifiers": []
+        },
+        {
+          "id": "soup_008",
+          "name": "Seafood with Tofu Soup",
+          "price": 7.00,
+          "modifiers": []
+        },
+        {
+          "id": "soup_009",
+          "name": "Seafood Hot and Sour Soup",
+          "price": 7.00,
+          "modifiers": []
+        },
+        {
+          "id": "soup_010",
+          "name": "Creamy King Crab Meat with Fish Maw Soup",
+          "price": 8.00,
+          "modifiers": []
+        },
+        {
+          "id": "soup_011",
+          "name": "Dried Scallops with Yellow Chive Soup",
+          "price": 8.00,
+          "modifiers": []
+        },
+        {
+          "id": "soup_012",
+          "name": "Seaweed and Tofu Soup",
+          "price": 6.45,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "bbq",
       "name": "BBQ",
       "items": [
-        {"id": "bbq_001", "name": "BBQ Duck", "price": 15.35, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Half", "price": 0}, {"name": "Whole", "price": 12.00}]}]},
-        {"id": "bbq_002", "name": "Marinated Duck", "price": 15.35, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Half", "price": 0}, {"name": "Whole", "price": 12.00}]}]},
-        {"id": "bbq_003", "name": "BBQ Pork Tenderloin", "price": 19.75, "modifiers": []},
-        {"id": "bbq_004", "name": "BBQ Spare Ribs", "price": 19.75, "modifiers": []},
-        {"id": "bbq_005", "name": "Roast Pork Belly", "price": 19.75, "modifiers": []},
-        {"id": "bbq_006", "name": "Beijing Duck", "price": 28.55, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Half", "price": 0}, {"name": "Whole", "price": 25.00}]}]},
-        {"id": "bbq_007", "name": "MingHin's Special Cage-Free Chicken", "price": 21.95, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Half", "price": 0}, {"name": "Whole", "price": 18.00}]}]},
-        {"id": "bbq_008", "name": "Hand Shredded Chicken", "price": 21.95, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Half", "price": 0}, {"name": "Whole", "price": 18.00}]}]},
-        {"id": "bbq_009", "name": "MingHin's BBQ Combination Platter", "price": 26.35, "modifiers": []},
-        {"id": "bbq_010", "name": "Gingers and Scallion Chicken", "price": 21.95, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Half", "price": 0}, {"name": "Whole", "price": 18.00}]}]}
+        {
+          "id": "bbq_001",
+          "name": "Roast Pork Belly",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "bbq_002",
+          "name": "Beijing Duck",
+          "price": 29.95,
+          "modifiers": []
+        },
+        {
+          "id": "bbq_003",
+          "name": "BBQ Duck",
+          "price": 15.45,
+          "modifiers": []
+        },
+        {
+          "id": "bbq_004",
+          "name": "Chiu Chow Style Marinated Duck",
+          "price": 15.45,
+          "modifiers": []
+        },
+        {
+          "id": "bbq_005",
+          "name": "BBQ Pork Tenderloin",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bbq_006",
+          "name": "BBQ Pork Rib",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bbq_007",
+          "name": "Minghin's Special Cage-free Chicken",
+          "price": 22.95,
+          "modifiers": []
+        },
+        {
+          "id": "bbq_008",
+          "name": "Hand Shredded Chicken",
+          "price": 22.95,
+          "modifiers": []
+        },
+        {
+          "id": "bbq_009",
+          "name": "Deep Fried Pigeon",
+          "price": 23.95,
+          "modifiers": []
+        },
+        {
+          "id": "bbq_010",
+          "name": "Minghin's BBQ Combination Platter",
+          "price": 25.95,
+          "modifiers": []
+        },
+        {
+          "id": "bbq_011",
+          "name": "Chiu Chow Style Marinated Platter",
+          "price": 25.95,
+          "modifiers": []
+        },
+        {
+          "id": "bbq_012",
+          "name": "BBQ Platter for Two",
+          "price": 22.95,
+          "modifiers": []
+        },
+        {
+          "id": "bbq_013",
+          "name": "Deep Fried Intestine",
+          "price": 18.95,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "id": "chefs_specialties",
+      "name": "Chef's Specialties",
+      "items": [
+        {
+          "id": "cs_001",
+          "name": "Lobster Salad",
+          "description": "Pre-order",
+          "price": 48.00,
+          "modifiers": []
+        },
+        {
+          "id": "cs_002",
+          "name": "Jumbo Lobster Salad",
+          "description": "Pre-order",
+          "price": 68.00,
+          "modifiers": []
+        },
+        {
+          "id": "cs_003",
+          "name": "Braised White Bird's Nest with Chicken",
+          "price": 88.00,
+          "modifiers": []
+        },
+        {
+          "id": "cs_004",
+          "name": "Braised White Bird's Nest with Coconut",
+          "price": 88.00,
+          "modifiers": []
+        },
+        {
+          "id": "cs_005",
+          "name": "Braised Australian Greenlip Abalone Steak",
+          "description": "2 Head",
+          "price": 138.00,
+          "modifiers": []
+        },
+        {
+          "id": "cs_006",
+          "name": "Japanese Abalone",
+          "description": "28 Head",
+          "price": 48.00,
+          "modifiers": []
+        },
+        {
+          "id": "cs_007",
+          "name": "Braised Australian Abalone Steak",
+          "description": "4 Head",
+          "price": 218.00,
+          "modifiers": []
+        },
+        {
+          "id": "cs_008",
+          "name": "Braised Shiitake Mushroom with Fish Maw and Goose Webs",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "cs_009",
+          "name": "Braised Sea Cucumber in Abalone Sauce",
+          "price": 28.00,
+          "modifiers": []
+        },
+        {
+          "id": "cs_010",
+          "name": "Braised Shiitake Mushroom with Sea Cucumber and Goose Webs",
+          "price": 33.00,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "live_seafood",
       "name": "Live Seafood",
       "items": [
-        {"id": "lsf_001", "name": "Boiled Live Shrimp", "price": 17.95, "modifiers": []},
-        {"id": "lsf_002", "name": "Salt and Pepper Live Shrimp", "price": 17.95, "modifiers": []},
-        {"id": "lsf_003", "name": "Clam with Black Bean Sauce", "price": 20.85, "modifiers": []},
-        {"id": "lsf_004", "name": "Stir-Fried Clam Hong Kong Style", "price": 20.85, "modifiers": []},
-        {"id": "lsf_005", "name": "Salt and Pepper Soft Shell Crab", "price": 21.95, "modifiers": []},
-        {"id": "lsf_006", "name": "Steamed Dungeness Crab", "price": 55.00, "modifiers": []},
-        {"id": "lsf_007", "name": "Hong Kong Style Dungeness Crab", "price": 55.00, "modifiers": []},
-        {"id": "lsf_008", "name": "Dungeness Crab with Ginger and Scallions", "price": 55.00, "modifiers": []},
-        {"id": "lsf_009", "name": "Salty Egg Yolk Dungeness Crab", "price": 60.50, "modifiers": []},
-        {"id": "lsf_010", "name": "Salt and Pepper Dungeness Crab", "price": 55.00, "modifiers": []},
-        {"id": "lsf_011", "name": "Dungeness Crab with Szechuan Sauce", "price": 55.00, "modifiers": []},
-        {"id": "lsf_012", "name": "Spicy Dungeness Crab", "price": 55.00, "modifiers": []},
-        {"id": "lsf_013", "name": "1 lb. King Crab", "description": "3 courses", "price": 48.00, "modifiers": []},
-        {"id": "lsf_014", "name": "Lobster with Ginger and Scallions", "price": 63.80, "modifiers": []},
-        {"id": "lsf_015", "name": "Salt and Pepper Lobster", "price": 63.80, "modifiers": []},
-        {"id": "lsf_016", "name": "Salty Egg Yolk Lobster", "price": 69.30, "modifiers": []},
-        {"id": "lsf_017", "name": "Hong Kong Style Lobster", "price": 63.80, "modifiers": []},
-        {"id": "lsf_018", "name": "Lobster with Szechuan Sauce", "price": 63.80, "modifiers": []},
-        {"id": "lsf_019", "name": "Spicy Lobster", "price": 63.80, "modifiers": []},
-        {"id": "lsf_020", "name": "Steamed Live Scallop w/ Garlic", "description": "2 Pieces", "price": 13.00, "modifiers": []},
-        {"id": "lsf_021", "name": "Steamed Live Scallop w/ XO Sauce", "description": "2 pieces", "price": 13.00, "modifiers": []},
-        {"id": "lsf_022", "name": "Steamed Live Oyster w/ Black Bean Sauce", "description": "1 piece", "price": 7.70, "modifiers": []},
-        {"id": "lsf_023", "name": "Steamed Live Oyster w/ Garlic", "description": "1 piece", "price": 7.70, "modifiers": []},
-        {"id": "lsf_024", "name": "Steamed Live Oyster w/ XO Sauce", "description": "1 piece", "price": 7.70, "modifiers": []},
-        {"id": "lsf_025", "name": "Deep Fried Live Oyster", "description": "1 piece", "price": 7.70, "modifiers": []},
-        {"id": "lsf_026", "name": "Steamed Big Mouth Bass", "price": 49.50, "modifiers": []},
-        {"id": "lsf_027", "name": "Steamed Big Mouth Bass with Szechuan Sauce", "price": 49.50, "modifiers": []},
-        {"id": "lsf_028", "name": "1 lb. Steamed Green Grouper", "price": 35.00, "modifiers": []},
-        {"id": "lsf_029", "name": "1 lb. Steamed Red Grouper", "price": 35.00, "modifiers": []},
-        {"id": "lsf_030", "name": "1 lb. Steamed Large Sleepy Goby", "price": 35.00, "modifiers": []},
-        {"id": "lsf_031", "name": "1 lb. Steamed Stonefish", "price": 20.00, "modifiers": []},
-        {"id": "lsf_032", "name": "Special Stir-Fried Dungeness Crab", "price": 55.00, "modifiers": []}
+        {
+          "id": "lsf_001",
+          "name": "Live Mussels",
+          "price": 21.40,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_002",
+          "name": "Clam with Black Bean Sauce",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_003",
+          "name": "Boiled Live Shrimp",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_004",
+          "name": "Salt and Pepper Live Shrimp",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_005",
+          "name": "Steamed Big Mouth Bass",
+          "description": "each",
+          "price": 42.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_006",
+          "name": "Steamed Big Mouth Bass with SzeChuan Sauce",
+          "description": "each",
+          "price": 42.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_007",
+          "name": "Steamed Live Oyster with Garlic",
+          "description": "each",
+          "price": 7.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_008",
+          "name": "Steamed Live Oyster with Black Bean Sauce",
+          "description": "each",
+          "price": 7.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_009",
+          "name": "Deep Fried Live Oyster",
+          "description": "each",
+          "price": 7.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_010",
+          "name": "Steamed Live Scallop with Garlic",
+          "description": "each",
+          "price": 15.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_011",
+          "name": "Steamed Live Scallop with X.O. Sauce",
+          "description": "each",
+          "price": 15.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_012",
+          "name": "Salt and Pepper Soft Shell Crab",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_013",
+          "name": "Steamed Lobster with Garlic and Vermicelli",
+          "price": 38.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_014",
+          "name": "Lobster with Ginger and Scallions",
+          "price": 38.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_015",
+          "name": "Hong Kong Lobster",
+          "price": 38.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_016",
+          "name": "Steamed Lobster",
+          "price": 38.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_017",
+          "name": "Salted Egg Yolk Lobster",
+          "price": 42.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_018",
+          "name": "Lobster with Szechuan Sauce",
+          "price": 38.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_019",
+          "name": "Salt and Pepper Lobster",
+          "price": 38.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_020",
+          "name": "Lobster with Ginger & Scallions Noodles",
+          "price": 48.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_021",
+          "name": "Steamed Red Grouper",
+          "price": 32.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_022",
+          "name": "Steamed Large Sleepy Goby",
+          "price": 98.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_023",
+          "name": "Steamed Live Green Grouper",
+          "price": 73.50,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_024",
+          "name": "Steamed Turbot",
+          "price": 48.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_025",
+          "name": "Steamed Dungeness Crab",
+          "price": 48.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_026",
+          "name": "Hong Kong Style Dungeness Crab",
+          "price": 48.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_027",
+          "name": "Dungeness Crab with Ginger and Scallions",
+          "price": 48.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_028",
+          "name": "Salt & Pepper Dungeness Crab",
+          "price": 48.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_029",
+          "name": "Salted Egg Yolk Dungeness Crab",
+          "price": 53.00,
+          "modifiers": []
+        },
+        {
+          "id": "lsf_030",
+          "name": "Dungeness Crab with Szechuan Sauce",
+          "price": 48.00,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "seafood",
       "name": "Seafood",
       "items": [
-        {"id": "sf_001", "name": "Spicy Shell-On Shrimp", "price": 23.05, "modifiers": [{"id": "spice", "name": "Spice Level", "required": false, "options": [{"name": "Mild", "price": 0}, {"name": "Medium", "price": 0}, {"name": "Spicy", "price": 0}]}]},
-        {"id": "sf_002", "name": "Salt and Pepper Shell-On Shrimp", "price": 23.05, "modifiers": []},
-        {"id": "sf_003", "name": "Salt and Pepper Shrimp", "price": 23.05, "modifiers": []},
-        {"id": "sf_004", "name": "Stir-Fried Shrimp and Scallop with King Mushroom", "price": 23.05, "modifiers": []},
-        {"id": "sf_005", "name": "Mixed Seafood in Nest", "price": 23.05, "modifiers": []},
-        {"id": "sf_006", "name": "Kung Pao Shrimp", "description": "Contains peanuts", "price": 23.05, "modifiers": [{"id": "spice", "name": "Spice Level", "required": false, "options": [{"name": "Mild", "price": 0}, {"name": "Medium", "price": 0}, {"name": "Spicy", "price": 0}]}]},
-        {"id": "sf_007", "name": "Shrimp with Ginger and Scallions", "price": 23.05, "modifiers": []},
-        {"id": "sf_008", "name": "Sweet and Sour Shrimp", "price": 23.05, "modifiers": []},
-        {"id": "sf_009", "name": "Shrimp Chop Suey", "price": 23.05, "modifiers": []},
-        {"id": "sf_010", "name": "Shrimp in Lobster Sauce", "price": 23.05, "modifiers": []},
-        {"id": "sf_011", "name": "Shrimp with Seasonal Vegetables", "price": 23.05, "modifiers": []},
-        {"id": "sf_012", "name": "Steamed Whole Shrimp with Garlic Sauce", "price": 23.05, "modifiers": []},
-        {"id": "sf_013", "name": "Salt and Pepper Smelt Fish", "price": 23.05, "modifiers": []},
-        {"id": "sf_014", "name": "Salt and Pepper Squid", "price": 23.05, "modifiers": []},
-        {"id": "sf_015", "name": "Salt and Pepper Fish Fillet", "price": 23.05, "modifiers": []},
-        {"id": "sf_016", "name": "Fish Fillet with Yellow Chive", "price": 23.05, "modifiers": []},
-        {"id": "sf_017", "name": "Fish Fillet with Ginger and Scallions", "price": 23.05, "modifiers": []},
-        {"id": "sf_018", "name": "Fish Fillet and Tofu with XO Sauce Casserole", "price": 23.05, "modifiers": []},
-        {"id": "sf_019", "name": "Shrimp with Yellow Chive", "price": 24.15, "modifiers": []},
-        {"id": "sf_020", "name": "Shrimp with Scrambled Egg", "price": 23.05, "modifiers": []},
-        {"id": "sf_021", "name": "Nagaimo Yam and Ginkgo with Fish Fillet", "price": 23.05, "modifiers": []},
-        {"id": "sf_022", "name": "Nagaimo Yam and Ginkgo with Shrimp", "price": 23.05, "modifiers": []},
-        {"id": "sf_023", "name": "Nagaimo Yam and Ginkgo with Fish Cake", "price": 16.95, "modifiers": []},
-        {"id": "sf_024", "name": "Steamed Japanese Tofu with Scallop in Two Flavors", "price": 23.05, "modifiers": []},
-        {"id": "sf_025", "name": "Baby Oyster Omelette", "price": 23.05, "modifiers": []},
-        {"id": "sf_026", "name": "Roast Pork and Oyster Casserole", "price": 21.95, "modifiers": []},
-        {"id": "sf_027", "name": "Shrimp Egg Foo Young", "description": "3 piece", "price": 21.95, "modifiers": []},
-        {"id": "sf_028", "name": "Bitter Melon and Shrimp with Scrambled Egg", "price": 23.05, "modifiers": []},
-        {"id": "sf_029", "name": "Tofu with Assorted Meat Casserole", "price": 24.15, "modifiers": []}
-      ]
-    },
-    {
-      "id": "beef",
-      "name": "Beef",
-      "items": [
-        {"id": "bf_001", "name": "Rib Eye Steak with Fresh Mushroom", "price": 27.45, "modifiers": []},
-        {"id": "bf_002", "name": "Rib Eye Steak with Fresh Asparagus", "price": 27.45, "modifiers": []},
-        {"id": "bf_003", "name": "Beef with Chinese Broccoli", "price": 21.95, "modifiers": []},
-        {"id": "bf_004", "name": "Beef with American Broccoli", "price": 21.95, "modifiers": []},
-        {"id": "bf_005", "name": "Beef Tenderloin with Sweet Saki Sauce", "price": 21.95, "modifiers": []},
-        {"id": "bf_006", "name": "Orange Beef", "price": 21.95, "modifiers": []},
-        {"id": "bf_007", "name": "Beef in Black Bean and Garlic Sauce", "price": 21.95, "modifiers": []},
-        {"id": "bf_008", "name": "Beef Tenderloin with Black Pepper Sauce", "price": 21.95, "modifiers": []},
-        {"id": "bf_009", "name": "Beef Rib with Black Pepper Sauce", "price": 23.05, "modifiers": []},
-        {"id": "bf_010", "name": "Beef with Ginger and Scallions", "price": 21.95, "modifiers": []},
-        {"id": "bf_011", "name": "Beef Brisket with Eggplant", "price": 21.95, "modifiers": []},
-        {"id": "bf_012", "name": "Ox Tail with Honey and Black Pepper Casserole", "price": 25.25, "modifiers": []},
-        {"id": "bf_013", "name": "Fatty Beef in Abalone Sauce", "price": 23.05, "modifiers": []},
-        {"id": "bf_014", "name": "Fatty Beef in Wasabi Sauce", "price": 21.95, "modifiers": []},
-        {"id": "bf_015", "name": "Satay Fatty Beef with Golden Mushroom", "price": 21.95, "modifiers": []},
-        {"id": "bf_016", "name": "Bitter Melon with Beef", "price": 21.95, "modifiers": []},
-        {"id": "bf_017", "name": "Jalapeno with Beef", "price": 21.95, "modifiers": []},
-        {"id": "bf_018", "name": "Beef Egg Foo Young", "description": "3 piece", "price": 20.85, "modifiers": []},
-        {"id": "bf_019", "name": "Tomato and Green Pepper with Beef", "price": 21.95, "modifiers": []},
-        {"id": "bf_020", "name": "Beef Chop Suey", "price": 21.95, "modifiers": []},
-        {"id": "bf_021", "name": "Mongolian Beef", "price": 21.95, "modifiers": []},
-        {"id": "bf_022", "name": "Beef with Seasonal Vegetable", "price": 21.95, "modifiers": []},
-        {"id": "bf_023", "name": "Beef with Snow Peas", "price": 21.95, "modifiers": []},
-        {"id": "bf_024", "name": "Cashew Beef", "price": 21.95, "modifiers": []},
-        {"id": "bf_025", "name": "Kung Pao Beef", "description": "Contains peanuts", "price": 21.95, "modifiers": [{"id": "spice", "name": "Spice Level", "required": false, "options": [{"name": "Mild", "price": 0}, {"name": "Medium", "price": 0}, {"name": "Spicy", "price": 0}]}]}
+        {
+          "id": "sf_001",
+          "name": "Salt and Pepper Shell on Shrimp",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_002",
+          "name": "Salt and Pepper Squid",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_003",
+          "name": "Salt and Pepper Smelt Fish",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_004",
+          "name": "Salt and Pepper Shrimp",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_005",
+          "name": "Kung Pao Shrimp",
+          "description": "contains peanuts",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_006",
+          "name": "Steamed Whole Shrimp with Garlic Sauce",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_007",
+          "name": "Shrimp and Walnut with Thousand Sauce",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_008",
+          "name": "Mongolian Shrimp",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_009",
+          "name": "Salt and Pepper Fish Fillet",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_010",
+          "name": "Japanese Tofu with Golden Mushroom",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_011",
+          "name": "Steamed Clam in XO Sauce",
+          "price": 21.40,
+          "modifiers": []
+        },
+        {
+          "id": "sf_012",
+          "name": "Fish Fillet with Ginger and Scallions",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_013",
+          "name": "Stir-Fried Eel with Green Bean",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_014",
+          "name": "Clam with Chinese Cooking Wine",
+          "price": 21.40,
+          "modifiers": []
+        },
+        {
+          "id": "sf_015",
+          "name": "Japanese Tofu Topped with Seafood",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_016",
+          "name": "Walnut Shrimp",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_017",
+          "name": "Shrimp in Lobster Sauce",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_018",
+          "name": "Shrimp Egg Foo Young",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_019",
+          "name": "Stir-Fried Shrimp and Scallop with King Mushroom",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_020",
+          "name": "Sweet and Sour Shrimp",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_021",
+          "name": "Fish Fillet with Yellow Chive",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_022",
+          "name": "Shrimp with American Broccoli",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_023",
+          "name": "Shrimp with Seasonal Vegetable",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_024",
+          "name": "Gui Hua Bang in XO Sauce",
+          "price": 44.40,
+          "modifiers": []
+        },
+        {
+          "id": "sf_025",
+          "name": "Mixed Seafood in Pineapple Ship",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_026",
+          "name": "Shrimp with Scrambled Egg",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_027",
+          "name": "Shrimp with Snow Pea",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_028",
+          "name": "Mixed Seafood in Nest",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_029",
+          "name": "Shrimp with Yellow Chive",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_030",
+          "name": "Minghin's Special Stir-Fried",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_031",
+          "name": "Crisp Fish Fillet in Spicy and Sour Sauce",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_032",
+          "name": "Shrimp Chop Suey",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "sf_033",
+          "name": "Gui Hua Bang with Snow Pea and Celery",
+          "price": 44.40,
+          "modifiers": []
+        },
+        {
+          "id": "sf_034",
+          "name": "Mixed Seafood with Melon",
+          "price": 19.95,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "poultry",
       "name": "Poultry",
       "items": [
-        {"id": "pl_001", "name": "Stir-Fried Chicken in Black Bean and Pepper Sauce", "price": 20.85, "modifiers": []},
-        {"id": "pl_002", "name": "Chicken with Ginger and Scallion", "price": 20.85, "modifiers": []},
-        {"id": "pl_003", "name": "Diced Chicken with Eggplant and Salty Fish", "price": 20.85, "modifiers": []},
-        {"id": "pl_004", "name": "Chicken with American Broccoli", "price": 20.85, "modifiers": []},
-        {"id": "pl_005", "name": "Orange Chicken", "price": 20.85, "modifiers": []},
-        {"id": "pl_006", "name": "General Tao's Chicken", "price": 20.85, "modifiers": [{"id": "spice", "name": "Spice Level", "required": false, "options": [{"name": "Mild", "price": 0}, {"name": "Medium", "price": 0}, {"name": "Spicy", "price": 0}]}]},
-        {"id": "pl_007", "name": "Sweet and Sour Chicken", "price": 20.85, "modifiers": []},
-        {"id": "pl_008", "name": "Chicken with Seasonal Vegetables", "price": 20.85, "modifiers": []},
-        {"id": "pl_009", "name": "Sesame Chicken", "price": 20.85, "modifiers": []},
-        {"id": "pl_010", "name": "Cashew Chicken", "price": 20.85, "modifiers": []},
-        {"id": "pl_011", "name": "Chicken with Snow Peas", "price": 20.85, "modifiers": []},
-        {"id": "pl_012", "name": "Crispy Deep Fried Chicken", "price": 21.95, "modifiers": []},
-        {"id": "pl_013", "name": "Kung Pao Chicken", "description": "Contains peanuts", "price": 20.85, "modifiers": [{"id": "spice", "name": "Spice Level", "required": false, "options": [{"name": "Mild", "price": 0}, {"name": "Medium", "price": 0}, {"name": "Spicy", "price": 0}]}]},
-        {"id": "pl_014", "name": "Chicken Egg Foo Young", "description": "3 pieces", "price": 19.75, "modifiers": []},
-        {"id": "pl_015", "name": "Mongolian Chicken", "price": 20.85, "modifiers": []},
-        {"id": "pl_016", "name": "Chicken Chop Suey", "price": 20.85, "modifiers": []},
-        {"id": "pl_017", "name": "Jalapeno Chicken", "price": 20.85, "modifiers": []},
-        {"id": "pl_018", "name": "Bitter Melon with Chicken", "price": 20.85, "modifiers": []},
-        {"id": "pl_019", "name": "Crispy Diced Chicken", "price": 20.85, "modifiers": []}
+        {
+          "id": "pl_001",
+          "name": "Orange Chicken",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_002",
+          "name": "General Tso's Chicken",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_003",
+          "name": "Sesame Chicken",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_004",
+          "name": "Chicken with Fresh Asparagus",
+          "price": 19.00,
+          "modifiers": []
+        },
+        {
+          "id": "pl_005",
+          "name": "Chicken with Fresh Mushroom",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_006",
+          "name": "Kung Pao Chicken",
+          "description": "contains peanuts",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_007",
+          "name": "Gingers and Scallions Chickens",
+          "price": 23.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_008",
+          "name": "Chicken With Baby Bok Choy",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_009",
+          "name": "Chicken with Green Bean",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_010",
+          "name": "Steamed Chicken in Lotus Leaf",
+          "price": 19.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_011",
+          "name": "Sweet and Sour Chicken",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_012",
+          "name": "Stir-Fried Chicken In Black Bean and Pepper Sauce",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_013",
+          "name": "Crispy Chicken",
+          "price": 23.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_014",
+          "name": "Chicken with Ginger and Scallion",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_015",
+          "name": "Diced Chicken with Eggplant and Salted Fish",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_016",
+          "name": "Chicken in Lemon Sauce",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_017",
+          "name": "Chicken With Seasonal Vegetable",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_018",
+          "name": "Chicken with Pineapple",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_019",
+          "name": "Chicken with Cashew",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_020",
+          "name": "Chicken Egg Foo Young",
+          "price": 16.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_021",
+          "name": "Chicken in Special Sauce",
+          "price": 21.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_022",
+          "name": "Chicken with American Broccoli",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_023",
+          "name": "Green Chive with Salted Fish and Chicken",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_024",
+          "name": "Chicken With Peapod",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pl_025",
+          "name": "Stir-Fried Chicken and Celery",
+          "price": 17.45,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "id": "beef",
+      "name": "Beef",
+      "items": [
+        {
+          "id": "bf_001",
+          "name": "Mongolian Beef",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_002",
+          "name": "Rib Eye Steak with Fresh Mushroom",
+          "price": 24.40,
+          "modifiers": []
+        },
+        {
+          "id": "bf_003",
+          "name": "Rib Eye Steak with Fresh Asparagus",
+          "price": 24.40,
+          "modifiers": []
+        },
+        {
+          "id": "bf_004",
+          "name": "Beef with American Broccoli",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_005",
+          "name": "Beef with Chinese Broccoli",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_006",
+          "name": "Beef with Peapod",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_007",
+          "name": "Honey and Black Pepper Beef Rib",
+          "price": 19.40,
+          "modifiers": []
+        },
+        {
+          "id": "bf_008",
+          "name": "Orange Beef",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_009",
+          "name": "Hunan Beef",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_010",
+          "name": "Satay Fatty Beef with Golden Mushroom",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_011",
+          "name": "Beef with Zucchini in Black Pepper Sauce",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_012",
+          "name": "Fatty Beef in Abalone Sauce",
+          "price": 20.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_013",
+          "name": "Beef with Ginger and Scallions",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_014",
+          "name": "Beef Chop Suey",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_015",
+          "name": "Fatty Beef and Duck Intestine in Abalone Sauce",
+          "price": 20.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_016",
+          "name": "Kung Pao Beef",
+          "description": "contains peanuts",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_017",
+          "name": "Beef in Black Bean and Garlic Sauce",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_018",
+          "name": "Satay Beef",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_019",
+          "name": "Beef with Pineapple",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_020",
+          "name": "Stir-Fried On Choy with Beef",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_021",
+          "name": "Beef Tenderloin with Mango Sauce",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_022",
+          "name": "Fatty Beef in Wasabi Sauce",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_023",
+          "name": "Beef Egg Foo Young",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "bf_024",
+          "name": "Stir Fried Fatty Beef with Vegetable in Wasabi",
+          "price": 19.95,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "pork",
       "name": "Pork",
       "items": [
-        {"id": "pk_001", "name": "Pan-Fried Pork Chop", "price": 20.85, "modifiers": []},
-        {"id": "pk_002", "name": "Salt and Pepper Pork Chop", "price": 20.85, "modifiers": []},
-        {"id": "pk_003", "name": "Sweet and Sour Pork Rib", "price": 20.85, "modifiers": []},
-        {"id": "pk_004", "name": "Sweet and Sour Pork", "price": 20.85, "modifiers": []},
-        {"id": "pk_005", "name": "Preserved Mustard w/ Pork Casserole", "price": 20.85, "modifiers": []},
-        {"id": "pk_006", "name": "Twice Cooked Pork Szechuan Style", "price": 20.85, "modifiers": []},
-        {"id": "pk_007", "name": "Stir-Fried Pork Chop in House Special Sauce", "price": 20.85, "modifiers": []},
-        {"id": "pk_008", "name": "BBQ Pork with Green Bean", "price": 20.85, "modifiers": []},
-        {"id": "pk_009", "name": "BBQ Pork with American Broccoli", "price": 20.85, "modifiers": []},
-        {"id": "pk_010", "name": "BBQ Pork Chop Suey", "price": 20.85, "modifiers": []},
-        {"id": "pk_011", "name": "BBQ Pork with Snow Peas", "price": 20.85, "modifiers": []},
-        {"id": "pk_012", "name": "Steamed Dried Fish and Pork Belly w/ XO Sauce", "price": 20.85, "modifiers": []},
-        {"id": "pk_013", "name": "BBQ Pork w/ Seasonal Vegetables", "price": 20.85, "modifiers": []},
-        {"id": "pk_014", "name": "Pork Belly w/ Chinese Broccoli", "price": 20.85, "modifiers": []},
-        {"id": "pk_015", "name": "Steamed Minced Pork w/ Pickled Vegetables", "price": 20.85, "modifiers": []},
-        {"id": "pk_016", "name": "Pork Chop w/ Mayonnaise Sauce", "price": 20.85, "modifiers": []},
-        {"id": "pk_017", "name": "BBQ Pork Egg Foo Young", "price": 19.75, "modifiers": []}
+        {
+          "id": "pk_001",
+          "name": "Sweet and Sour Pork",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pk_002",
+          "name": "Salt and Pepper Pork Chop",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pk_003",
+          "name": "Sweet and Sour Pork Rib",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pk_004",
+          "name": "Steamed Minced Pork with Pickled Vegetable",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pk_005",
+          "name": "Lemon Grass and Garlic Pork Rib",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pk_006",
+          "name": "Pork Belly with Chinese Broccoli",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pk_007",
+          "name": "Stir-Fried Pork Intestine with Green Chives",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pk_008",
+          "name": "Steamed Dried Fish and Pork Belly with XO Sauce",
+          "price": 17.45,
+          "modifiers": []
+        },
+        {
+          "id": "pk_009",
+          "name": "BBQ Pork Rib with Pumpkin",
+          "price": 17.45,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "vegetable",
       "name": "Vegetable",
       "items": [
-        {"id": "vg_001", "name": "Black Pepper Asparagus", "price": 20.85, "modifiers": []},
-        {"id": "vg_002", "name": "Stir-Fried American Broccoli with Garlic", "price": 18.65, "modifiers": []},
-        {"id": "vg_003", "name": "Stir-Fried Baby Bok Choy with Garlic", "price": 18.65, "modifiers": []},
-        {"id": "vg_004", "name": "Stir-Fried String Bean with Minced Pork", "price": 18.65, "modifiers": []},
-        {"id": "vg_005", "name": "On Choy with Pepper and Bean Curd Sauce", "price": 20.85, "modifiers": []},
-        {"id": "vg_006", "name": "On Choy with Garlic", "price": 20.85, "modifiers": []},
-        {"id": "vg_007", "name": "On Choy with Shrimp Sauce", "price": 20.85, "modifiers": []},
-        {"id": "vg_008", "name": "Vegetable Egg Foo Young", "description": "3 pieces", "price": 18.65, "modifiers": []},
-        {"id": "vg_009", "name": "Salt and Pepper Japanese Tofu", "price": 18.65, "modifiers": []},
-        {"id": "vg_010", "name": "Japanese Tofu with Golden Mushroom and Dried Scallop", "price": 20.85, "modifiers": []},
-        {"id": "vg_011", "name": "Chinese Broccoli with Garlic", "price": 18.65, "modifiers": []},
-        {"id": "vg_012", "name": "Snow Pea with Garlic", "price": 18.65, "modifiers": []},
-        {"id": "vg_013", "name": "Lettuce with Oyster Sauce", "price": 18.65, "modifiers": []},
-        {"id": "vg_014", "name": "Lettuce with Pepper and Bean Curd Sauce", "price": 18.65, "modifiers": []},
-        {"id": "vg_015", "name": "Pea Tip in Broth", "price": 21.95, "modifiers": []},
-        {"id": "vg_016", "name": "Pea Tip with Garlic", "price": 21.95, "modifiers": []},
-        {"id": "vg_017", "name": "Pea Tip with Salty and Preserved Egg", "price": 21.95, "modifiers": []},
-        {"id": "vg_018", "name": "Pea Tip w/ Japanese Tofu", "price": 21.95, "modifiers": []},
-        {"id": "vg_019", "name": "Mixed Vegetables with Garlic", "price": 18.65, "modifiers": []},
-        {"id": "vg_020", "name": "MaPo Tofu Casserole", "price": 18.65, "modifiers": [{"id": "spice", "name": "Spice Level", "required": false, "options": [{"name": "Mild", "price": 0}, {"name": "Medium", "price": 0}, {"name": "Spicy", "price": 0}]}]},
-        {"id": "vg_021", "name": "Healthy Stir-Fried Mixed Vegetables", "price": 19.75, "modifiers": []},
-        {"id": "vg_022", "name": "Bitter Melon with Scrambled Egg", "price": 18.65, "modifiers": []},
-        {"id": "vg_023", "name": "Bitter Melon with Black Bean Garlic Sauce", "price": 18.65, "modifiers": []},
-        {"id": "vg_024", "name": "Stir-Fried Choy Sum with Garlic", "price": 18.65, "modifiers": []},
-        {"id": "vg_025", "name": "Choy Sum with Salty Broth", "price": 18.65, "modifiers": []},
-        {"id": "vg_026", "name": "Stir-Fried String Beans with BBQ Duck", "price": 18.65, "modifiers": []}
+        {
+          "id": "vg_001",
+          "name": "Veggie Mapo Tofu Casserole",
+          "description": "No meat",
+          "price": 17.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_002",
+          "name": "Pea Tip with Garlic",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_003",
+          "name": "Pea Tip in Broth",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_004",
+          "name": "Pea Tip with Japanese Tofu",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_005",
+          "name": "Pea Tip with Salted and Preserved Egg",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_006",
+          "name": "Salt and Pepper Japanese Tofu",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_007",
+          "name": "Chinese Broccoli With Oyster Sauce",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_008",
+          "name": "Chinese Broccoli with Garlic",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_009",
+          "name": "Stir-Fried String Bean with Minced Pork",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_010",
+          "name": "On Choy with Pepper and Bean Curd Sauce",
+          "price": 19.40,
+          "modifiers": []
+        },
+        {
+          "id": "vg_011",
+          "name": "On Choy with Shrimp Sauce",
+          "price": 19.40,
+          "modifiers": []
+        },
+        {
+          "id": "vg_012",
+          "name": "On Choy with Garlic Sauce",
+          "price": 19.40,
+          "modifiers": []
+        },
+        {
+          "id": "vg_013",
+          "name": "Stir-Fried Baby Bok Choy with Garlic",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_014",
+          "name": "Stir-Fried String Bean with Shredded Duck",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_015",
+          "name": "String Bean with Dried Shrimp and Olive",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_016",
+          "name": "Stir-Fried Choy Sum with Pork Fat",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_017",
+          "name": "Stir-Fried Choy Sum with Garlic",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_018",
+          "name": "Stir-Fried American Broccoli with Garlic",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_019",
+          "name": "Crispy Lettuce with Black Bean Garlic Sauce",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_020",
+          "name": "Healthy Stir-Fried Mixed Vegetable",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_021",
+          "name": "Black Pepper Asparagus",
+          "price": 17.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_022",
+          "name": "Mixed Vegetable with Garlic",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_023",
+          "name": "Lettuce with Oyster Sauce",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_024",
+          "name": "Mixed Mushroom and Pickled Turnip",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_025",
+          "name": "Bitter Melon and Dace with Black Bean Garlic Sauce",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_026",
+          "name": "Salt & Pepper Tofu with Minced Pork",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_027",
+          "name": "Choy Sum with Salted Broth",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_028",
+          "name": "Choy Sum Casserole",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_029",
+          "name": "Iced Chinese Broccoli",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_030",
+          "name": "Iced Bitter Melon",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "vg_031",
+          "name": "Steamed Dried Shrimp with Choy Sum",
+          "price": 16.95,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "id": "hot_pot_casseroles",
+      "name": "Hot Pot Casseroles",
+      "items": [
+        {
+          "id": "hpc_001",
+          "name": "Beef Tenderloin and Black Pepper Sauce",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_002",
+          "name": "Beef Tenderloin with Sweet Saki Sauce",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_003",
+          "name": "Fish Fillet and Eggplant Casserole",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_004",
+          "name": "Salted Egg Yolk Lobster Casserole",
+          "price": 38.00,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_005",
+          "name": "Beef Tenderloin with Jalapeno",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_006",
+          "name": "Beef Rib with Black Pepper Sauce",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_007",
+          "name": "Mapo Tofu Casserole",
+          "description": "w/ Pork",
+          "price": 17.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_008",
+          "name": "Fish Fillet and Tofu with XO Sauce Casserole",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_009",
+          "name": "OX Tail with Honey and Pepper Casserole",
+          "price": 24.40,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_010",
+          "name": "Preserved Mustard with Pork Casserole",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_011",
+          "name": "Eight-treasure Tofu Hot Pot",
+          "price": 21.40,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_012",
+          "name": "BBQ Duck and Udon Noodle with Black Pepper Sauce",
+          "price": 17.40,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_013",
+          "name": "Beef Brisket and Eggplant Casserole",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_014",
+          "name": "Pea Tip with Minced Beef",
+          "price": 21.40,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_015",
+          "name": "Cage-free Chicken Casserole",
+          "price": 18.40,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_016",
+          "name": "Dried Scallops with Baby Bok Choy",
+          "price": 17.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_017",
+          "name": "Mixed Vegetable and Vermicelli Casserole",
+          "price": 17.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_018",
+          "name": "MingHin Special Casserole",
+          "price": 22.40,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_019",
+          "name": "Shrimp with Ginger and Scallions",
+          "price": 19.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_020",
+          "name": "Meat Ball and Fresh Mushroom Casserole",
+          "price": 18.40,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_021",
+          "name": "Fish Ball and Vegetable Casserole",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_022",
+          "name": "Beef Tenderloin with Ginger and Onion",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "hpc_023",
+          "name": "Pork Chop with Ginger and Green Onion",
+          "price": 17.95,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "fried_noodles",
       "name": "Fried Noodles",
       "items": [
-        {"id": "fn_001", "name": "Stir-Fried Chow Mein Noodles w/ Beef", "price": 19.75, "modifiers": []},
-        {"id": "fn_002", "name": "Beef and Vegetable on Pan-Fried Chow Mein Noodles", "price": 19.75, "modifiers": []},
-        {"id": "fn_003", "name": "Seafood and Vegetable on Pan-Fried Chow Mein Noodles", "price": 21.95, "modifiers": []},
-        {"id": "fn_004", "name": "Stir-Fried Chow Mein Noodles w/ Soy Sauce", "price": 18.65, "modifiers": []},
-        {"id": "fn_005", "name": "Stir-Fried Rice Noodles w/ Beef", "price": 19.00, "modifiers": []},
-        {"id": "fn_006", "name": "Beef and Vegetable on Pan-Fried Rice Noodles", "price": 19.75, "modifiers": []},
-        {"id": "fn_007", "name": "Singapore Stir-Fried Vermicelli Noodles", "description": "BBQ Pork and Shrimp", "price": 18.65, "modifiers": []},
-        {"id": "fn_008", "name": "Stir-Fried Udon w/ BBQ Pork", "price": 18.65, "modifiers": []},
-        {"id": "fn_009", "name": "Stir-Fried Udon w/ BBQ Duck", "price": 18.65, "modifiers": []},
-        {"id": "fn_010", "name": "Sauteed Vermicelli w/ BBQ Duck", "price": 18.65, "modifiers": []},
-        {"id": "fn_011", "name": "Stir-Fried Vermicelli w/ Beef in XO Sauce", "price": 20.85, "modifiers": []},
-        {"id": "fn_012", "name": "BBQ Pork Lo Mein", "price": 18.65, "modifiers": []},
-        {"id": "fn_013", "name": "Chicken Lo Mein", "price": 18.65, "modifiers": []},
-        {"id": "fn_014", "name": "Beef Lo Mein", "price": 19.75, "modifiers": []},
-        {"id": "fn_015", "name": "Shrimp Lo Mein", "price": 19.75, "modifiers": []},
-        {"id": "fn_016", "name": "Combination Lo Mein", "description": "Chicken, Beef, and Shrimp", "price": 20.85, "modifiers": []},
-        {"id": "fn_017", "name": "Mixed Vegetable Lo Mein", "price": 17.90, "modifiers": []},
-        {"id": "fn_018", "name": "Stir-Fried Vermicelli w/ Dried Scallops and Golden Mushroom", "price": 19.75, "modifiers": []},
-        {"id": "fn_019", "name": "Stir-Fried Udon w/ Eggplant in Garlic Sauce", "price": 18.65, "modifiers": []}
+        {
+          "id": "fn_001",
+          "name": "Stir Fried Rice Noodle Roll with XO Sauce",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_002",
+          "name": "Stir-Fried Chow Mein Noodle with Beef",
+          "price": 16.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_003",
+          "name": "Stir-Fried Rice Noodle with Beef",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_004",
+          "name": "Stir-Fried Chow Mein Noodle with Soy Sauce",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_005",
+          "name": "Combination Lo Mein",
+          "description": "Chicken, Beef, Shrimp",
+          "price": 17.95,
+          "modifiers": []
+        },
+        {
+          "id": "fn_006",
+          "name": "Stir-Fried Udon with BBQ Pork",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_007",
+          "name": "Stir-Fried Udon with BBQ Duck",
+          "price": 16.40,
+          "modifiers": []
+        },
+        {
+          "id": "fn_008",
+          "name": "Beef and Vegetable on Pan-Fried Rice Noodle",
+          "price": 16.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_009",
+          "name": "Spicy Beef Noodle Soup",
+          "price": 12.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_010",
+          "name": "Mixed Vegetable Lo Mein",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_011",
+          "name": "Beef Lo Mein",
+          "price": 16.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_012",
+          "name": "Chicken Lo Mein",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_013",
+          "name": "Singapore Stir-Fried Vermicelli Noodle",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_014",
+          "name": "BBQ Pork and Vegetable Mein",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_015",
+          "name": "Beef and Vegetable on Pan-Fried Noodle",
+          "price": 16.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_016",
+          "name": "Stir-Fried Rice Noodle with Beef and XO Sauce",
+          "price": 16.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_017",
+          "name": "Seafood and Vegetable on Pan-Fried Noodle",
+          "price": 17.95,
+          "modifiers": []
+        },
+        {
+          "id": "fn_018",
+          "name": "Stir-Fried Vermicelli With Beef in XO Sauce",
+          "price": 17.95,
+          "modifiers": []
+        },
+        {
+          "id": "fn_019",
+          "name": "Stir-Fried E-fu Noodle",
+          "price": 17.95,
+          "modifiers": []
+        },
+        {
+          "id": "fn_020",
+          "name": "Pan Fried Turnip Patties with XO Sauce",
+          "price": 14.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_021",
+          "name": "Sauteed Vermicelli with BBQ Duck",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_022",
+          "name": "Spicy Vegetable Noodle Soup",
+          "price": 12.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_023",
+          "name": "BBQ Duck with Thick Vermicelli Soup",
+          "price": 14.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_024",
+          "name": "Ginger and Green Onion Lo Mein",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_025",
+          "name": "Cantonese E-Fu Noodle in Soup",
+          "price": 18.95,
+          "modifiers": []
+        },
+        {
+          "id": "fn_026",
+          "name": "BBQ Pork with Thick Vermicelli Soup",
+          "price": 14.50,
+          "modifiers": []
+        },
+        {
+          "id": "fn_027",
+          "name": "Spicy Vegetable Udon Noodle Soup",
+          "price": 12.50,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "fried_rice",
       "name": "Fried Rice",
       "items": [
-        {"id": "fr_001", "name": "Young-Chow Fried Rice", "description": "BBQ pork and shrimp", "price": 18.15, "modifiers": []},
-        {"id": "fr_002", "name": "Dried Scallop and Egg Fried Rice", "price": 20.85, "modifiers": []},
-        {"id": "fr_003", "name": "Salty Fish and Chicken Fried Rice", "price": 18.15, "modifiers": []},
-        {"id": "fr_004", "name": "Fu-Kin Fried Rice", "description": "Dried scallop, shrimp, scallop, BBQ duck and chicken", "price": 19.75, "modifiers": []},
-        {"id": "fr_005", "name": "Seafood Fried Rice", "description": "Shrimp, scallop and squid", "price": 20.85, "modifiers": []},
-        {"id": "fr_006", "name": "BBQ Pork Fried Rice", "price": 18.15, "modifiers": []},
-        {"id": "fr_007", "name": "Chicken Fried Rice", "price": 18.15, "modifiers": []},
-        {"id": "fr_008", "name": "Beef Fried Rice", "price": 18.15, "modifiers": []},
-        {"id": "fr_009", "name": "Shrimp Fried Rice", "price": 19.75, "modifiers": []},
-        {"id": "fr_010", "name": "Combination Fried Rice", "description": "Chicken, beef, and shrimp", "price": 19.75, "modifiers": []},
-        {"id": "fr_011", "name": "Mixed Vegetable Fried Rice", "price": 17.90, "modifiers": []},
-        {"id": "fr_012", "name": "Seafood Egg White Fried Rice", "price": 19.75, "modifiers": []},
-        {"id": "fr_013", "name": "Jalapeno Fried Rice", "price": 19.75, "modifiers": []},
-        {"id": "fr_014", "name": "Pineapple Seafood Fried Rice", "price": 20.85, "modifiers": []}
-      ]
-    },
-    {
-      "id": "lunch_specials",
-      "name": "Lunch Specials",
-      "items": [
-        {"id": "ls_001", "name": "BBQ Pork on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_002", "name": "Roast Pork Belly on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_003", "name": "Roast Duck on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_004", "name": "BBQ Ribs on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_005", "name": "Pork Chop with Onions on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_006", "name": "Salt and Pepper Pork Chops on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_007", "name": "Sweet and Sour Pork on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_008", "name": "Orange Chicken on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_009", "name": "General Tao's Chicken on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_010", "name": "Sweet and Sour Chicken on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_011", "name": "Chicken and Pepper w/ Black Bean Sauce on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_012", "name": "Chicken w/ Ginger and Onion on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_013", "name": "Chicken w/ American Broccoli on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_014", "name": "Kung Pao Chicken on Rice", "description": "Contains peanuts", "price": 13.15, "modifiers": []},
-        {"id": "ls_015", "name": "Chicken w/ Vegetable on Rice", "price": 13.15, "modifiers": []},
-        {"id": "ls_016", "name": "Beef w/ Ginger and Onion on Rice", "price": 14.25, "modifiers": []},
-        {"id": "ls_017", "name": "Beef w/ Bitter Melon on Rice", "price": 14.25, "modifiers": []},
-        {"id": "ls_018", "name": "Beef w/ Chinese Broccoli on Rice", "price": 14.25, "modifiers": []},
-        {"id": "ls_019", "name": "Beef Tenderloin w/ Black Pepper Sauce on Rice", "price": 14.25, "modifiers": []},
-        {"id": "ls_020", "name": "Beef w/ Sweet Saki Sauce on Rice", "price": 14.25, "modifiers": []},
-        {"id": "ls_021", "name": "Beef Brisket w/ Vegetable on Rice", "price": 14.25, "modifiers": []},
-        {"id": "ls_022", "name": "MaPo Tofu on Rice", "price": 12.05, "modifiers": []},
-        {"id": "ls_023", "name": "Mixed Vegetables in Garlic Sauce on Rice", "price": 12.05, "modifiers": []},
-        {"id": "ls_024", "name": "Stir-Fried String Beans on Rice", "price": 12.05, "modifiers": []},
-        {"id": "ls_025", "name": "Vegetable Fried Rice", "price": 12.05, "modifiers": []},
-        {"id": "ls_026", "name": "Vegetable Stir-Fried Rice Noodle", "price": 12.05, "modifiers": []},
-        {"id": "ls_027", "name": "Shrimp w/ Vegetables on Rice", "price": 15.35, "modifiers": []},
-        {"id": "ls_028", "name": "Shrimp w/ Ginger and Onion on Rice", "price": 15.35, "modifiers": []},
-        {"id": "ls_029", "name": "Shrimp w/ Egg Sauce on Rice", "price": 15.35, "modifiers": []},
-        {"id": "ls_030", "name": "Shrimp w/ Yellow Chives on Rice", "price": 15.35, "modifiers": []},
-        {"id": "ls_031", "name": "Salt and Pepper Fish Fillet on Rice", "price": 15.35, "modifiers": []},
-        {"id": "ls_032", "name": "Fish Fillet w/ Yellow Chives on Rice", "price": 15.35, "modifiers": []},
-        {"id": "ls_033", "name": "Fish Fillet w/ Vegetable on Rice", "price": 15.35, "modifiers": []},
-        {"id": "ls_034", "name": "Fish Fillet w/ Sweet Saki Sauce on Rice", "price": 15.35, "modifiers": []},
-        {"id": "ls_035", "name": "Soy Sauce Chow Mein w/ Bean Sprouts", "price": 12.05, "modifiers": []},
-        {"id": "ls_036", "name": "Stir-Fried Flat Rice Noodle w/ Beef", "price": 12.05, "modifiers": []},
-        {"id": "ls_037", "name": "Rice Noodle Roll w/ XO Sauce", "price": 12.05, "modifiers": []},
-        {"id": "ls_038", "name": "Shredded BBQ Pork w/ Udon Noodles", "price": 12.05, "modifiers": []},
-        {"id": "ls_039", "name": "Shredded BBQ Duck w/ Vermicelli", "price": 12.05, "modifiers": []},
-        {"id": "ls_040", "name": "Fu-Kin Fried Rice (Lunch)", "price": 13.15, "modifiers": []},
-        {"id": "ls_041", "name": "Yang Chou Fried Rice (Lunch)", "price": 13.15, "modifiers": []},
-        {"id": "ls_042", "name": "BBQ Pork Fried Rice (Lunch)", "price": 13.15, "modifiers": []},
-        {"id": "ls_043", "name": "Dried Scallops and Egg Fried Rice (Lunch)", "price": 13.15, "modifiers": []},
-        {"id": "ls_044", "name": "Chicken and Salty Fish Fried Rice (Lunch)", "price": 13.15, "modifiers": []},
-        {"id": "ls_045", "name": "Shrimp Fried Rice (Lunch)", "price": 13.15, "modifiers": []},
-        {"id": "ls_046", "name": "Chicken Fried Rice (Lunch)", "price": 13.15, "modifiers": []}
+        {
+          "id": "fr_001",
+          "name": "Shrimp Fried Rice",
+          "price": 16.95,
+          "modifiers": []
+        },
+        {
+          "id": "fr_002",
+          "name": "Chicken Fried Rice",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_003",
+          "name": "Combination Fried Rice",
+          "description": "Chicken, Beef, BBQ Pork",
+          "price": 16.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_004",
+          "name": "Combo Fried Rice",
+          "description": "Chicken, Beef, Shrimp",
+          "price": 16.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_005",
+          "name": "Mixed Vegetable Fried Rice",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_006",
+          "name": "BBQ Pork Fried Rice",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_007",
+          "name": "Beef Fried Rice",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_008",
+          "name": "Salted Fish & Chicken Fried Rice",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_009",
+          "name": "Dried Scallops & Egg Fried Rice",
+          "price": 17.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_010",
+          "name": "Sea Eel Fried Rice",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_011",
+          "name": "MingHin Special Fried Rice",
+          "price": 18.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_012",
+          "name": "Young-Chow Fried Rice",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_013",
+          "name": "Minced Beef Fried Rice",
+          "price": 15.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_014",
+          "name": "Seafood Pineapple Fried Rice",
+          "price": 16.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_015",
+          "name": "Shredded BBQ Duck Fried Rice",
+          "price": 16.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_016",
+          "name": "Fu-Kin Fried Rice",
+          "price": 16.50,
+          "modifiers": []
+        },
+        {
+          "id": "fr_017",
+          "name": "Tai-Chi Fried Rice",
+          "price": 15.50,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "extras",
       "name": "Extras",
       "items": [
-        {"id": "ex_001", "name": "White Rice", "price": 2.00, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Small", "price": 0}, {"name": "Large", "price": 1.50}]}]},
-        {"id": "ex_002", "name": "Brown Rice", "price": 2.00, "modifiers": [{"id": "size", "name": "Size", "required": true, "options": [{"name": "Small", "price": 0}, {"name": "Large", "price": 1.50}]}]},
-        {"id": "ex_003", "name": "Almond Cookies", "description": "2 cookies", "price": 1.00, "modifiers": []}
+        {
+          "id": "ex_001",
+          "name": "White Rice",
+          "price": 1.50,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "id": "new_dim_sum",
+      "name": "New Dim Sum",
+      "items": [
+        {
+          "id": "nds_001",
+          "name": "Pork Soup Dumpling (XiaoLongBao)",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "nds_002",
+          "name": "Wood Ear Mushroom and Pork Dumpling",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "nds_003",
+          "name": "Vegetable Potsticker",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "nds_004",
+          "name": "Chestnut and Pork Dumpling",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "nds_005",
+          "name": "Steamed Salted Egg Yolk Bun",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "nds_006",
+          "name": "Steamed Pork Spinach Bun",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "nds_007",
+          "name": "Red Bean Paste Turnover",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "nds_008",
+          "name": "Scallion Pancake",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "nds_009",
+          "name": "Herbal Chicken Feet",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "nds_010",
+          "name": "Satay Beef Tendon",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "nds_011",
+          "name": "Braised Beef Honeycomb Tripe",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "nds_012",
+          "name": "Steamed Pork Tripe with Pickle",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "nds_013",
+          "name": "Duck Wings with Pepper Sauce",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "nds_014",
+          "name": "Red Date Cake",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "nds_015",
+          "name": "Coconut Red Bean Cake",
+          "price": 6.05,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "id": "dim_sum",
+      "name": "Dim Sum (Steamed & Fried)",
+      "items": [
+        {
+          "id": "ds_001",
+          "name": "MingHin's Shrimp Dumpling",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "ds_002",
+          "name": "Siu Mai",
+          "description": "Pork & Shrimp",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "ds_003",
+          "name": "Shrimp Dumpling with Pea Tip",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "ds_004",
+          "name": "Chaozhou Style Dumpling",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_005",
+          "name": "Country Style Dumpling",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_006",
+          "name": "Shrimp Dumpling with Green Chive",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "ds_007",
+          "name": "Stuffed Bean Curd Skin With Pork & Shrimp",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_008",
+          "name": "Home-made Fish Ball",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_009",
+          "name": "Beef Ball",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_010",
+          "name": "Spare Ribs with Black Bean Sauce",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_011",
+          "name": "Chicken Feet w. Special Sauce",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_012",
+          "name": "Beef Tripe w. Ginger Onion",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_013",
+          "name": "Baby Cuttlefish w. Curry Sauce",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "ds_014",
+          "name": "Stuffed Sticky Rice in Lotus Leaf",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "ds_015",
+          "name": "Short Rib with Pepper Sauce",
+          "price": 9.25,
+          "modifiers": []
+        },
+        {
+          "id": "ds_016",
+          "name": "Braised Pork Belly w. Lotus Root",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "ds_017",
+          "name": "Chicken Feet w. Abalone Sauce",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "ds_018",
+          "name": "Pan Fried Turnip Cake",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_019",
+          "name": "Pan Fried Water Chestnut Cake",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "ds_020",
+          "name": "Mini Sweet Custard Roll",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "ds_021",
+          "name": "Deep Fried Pork Dumpling",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "ds_022",
+          "name": "Deep Fried Shrimp Roll",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "ds_023",
+          "name": "Deep Fried Taro Roll",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_024",
+          "name": "Pan Fried Pot Sticker",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_025",
+          "name": "Deep Fried Sesame Ball",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "ds_026",
+          "name": "Deep Fried Jumbo Sesame Ball",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_027",
+          "name": "Pan Fried Corn & Pork Cake",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_028",
+          "name": "Pan Fried Green & Chive Cake",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_029",
+          "name": "Pan Fried Taro Cake",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "ds_030",
+          "name": "Stir Fried Sticky Rice",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "ds_031",
+          "name": "Deep Fried Crab Meat and Seaweed Roll",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "ds_032",
+          "name": "Pan Fried Vegetable Roll",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_033",
+          "name": "Baked BBQ Pork Turnover",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_034",
+          "name": "Pan Fried Vegetable & Pork Bun",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_035",
+          "name": "Deep Fried Taro Puff",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "ds_036",
+          "name": "Deep Fried Spring Roll",
+          "price": 7.25,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "id": "crepes_rice_rolls",
+      "name": "Crepes & Rice Rolls",
+      "items": [
+        {
+          "id": "crr_001",
+          "name": "Plain Crepe",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "crr_002",
+          "name": "Rice Crepe with Deep Fried Chinese Donut",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "crr_003",
+          "name": "Beef Crepe",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "crr_004",
+          "name": "Vegetable Crepe",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "crr_005",
+          "name": "BBQ Pork Crepe",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "crr_006",
+          "name": "Shrimp Crepe",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "crr_007",
+          "name": "Beef Brisket & Rice Noodle Roll in Pot",
+          "price": 9.25,
+          "modifiers": []
+        },
+        {
+          "id": "crr_008",
+          "name": "Spare Rib and Rice Noodle Roll in Pot",
+          "price": 9.25,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "id": "buns",
+      "name": "Buns",
+      "items": [
+        {
+          "id": "bun_001",
+          "name": "Baked Creamy Egg Yolk Bun",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "bun_002",
+          "name": "Baked BBQ Pork Bun",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "bun_003",
+          "name": "Baked Ham and Cheese Bun",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "bun_004",
+          "name": "Egg Yolk Paste Bun",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "bun_005",
+          "name": "Lotus Seed Paste Bun",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "bun_006",
+          "name": "BBQ Pork Bun (Steamed)",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "bun_007",
+          "name": "Chicken & Dried Scallop Bun",
+          "price": 7.25,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "id": "congee",
+      "name": "Congee",
+      "items": [
+        {
+          "id": "cng_001",
+          "name": "Pork w. Preserved Egg Congee",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "cng_002",
+          "name": "Salty Pork Bone w. Dried Vegetable Congee",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "cng_003",
+          "name": "Fresh Fish Paste Congee",
+          "price": 7.25,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "id": "dessert",
+      "name": "Dessert",
+      "items": [
+        {
+          "id": "dss_001",
+          "name": "Puffy Egg Custard Tart",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "dss_002",
+          "name": "Puffy Egg Custard Tart Platter",
+          "description": "3 colors",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "dss_003",
+          "name": "Mango Pudding",
+          "price": 6.75,
+          "modifiers": []
+        },
+        {
+          "id": "dss_004",
+          "name": "Red Bean Pudding",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "dss_005",
+          "name": "Coconut Pudding",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "dss_006",
+          "name": "Sweet Egg Pastry",
+          "price": 6.05,
+          "modifiers": []
+        },
+        {
+          "id": "dss_007",
+          "name": "Malay Sponge Cake",
+          "price": 6.05,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "id": "specialties_larger_dishes",
+      "name": "Specialties & Larger Dishes",
+      "items": [
+        {
+          "id": "sld_001",
+          "name": "Short Rib with Honey Sauce",
+          "price": 9.25,
+          "modifiers": []
+        },
+        {
+          "id": "sld_002",
+          "name": "Braised Beef Varieties",
+          "price": 9.25,
+          "modifiers": []
+        },
+        {
+          "id": "sld_003",
+          "name": "Pork Feet w. Ginger & Vinegar",
+          "price": 9.25,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "id": "vegetables_dim_sum",
+      "name": "Vegetables (Dim Sum Portion)",
+      "items": [
+        {
+          "id": "vds_001",
+          "name": "Chinese Broccoli with Oyster Sauce",
+          "price": 8.95,
+          "modifiers": []
+        },
+        {
+          "id": "vds_002",
+          "name": "Lettuce with Oyster Sauce",
+          "price": 8.95,
+          "modifiers": []
+        },
+        {
+          "id": "vds_003",
+          "name": "Choy Sum with Oyster Sauce",
+          "price": 8.95,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "id": "bbq_dim_sum",
+      "name": "BBQ (Dim Sum Portion)",
+      "items": [
+        {
+          "id": "bds_001",
+          "name": "BBQ Pork",
+          "price": 9.95,
+          "modifiers": []
+        },
+        {
+          "id": "bds_002",
+          "name": "Crispy Pork Belly Macau Style",
+          "price": 9.95,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "drinks",
       "name": "Drinks",
       "items": [
-        {"id": "dr_001", "name": "Milk Tea", "price": 2.50, "modifiers": [{"id": "temp", "name": "Temperature", "required": true, "options": [{"name": "Hot", "price": 0}, {"name": "Cold", "price": 0}]}]},
-        {"id": "dr_002", "name": "Coffee", "price": 2.00, "modifiers": [{"id": "temp", "name": "Temperature", "required": true, "options": [{"name": "Hot", "price": 0}, {"name": "Cold", "price": 0}]}]},
-        {"id": "dr_003", "name": "Honey Lemon Tea", "price": 2.50, "modifiers": [{"id": "temp", "name": "Temperature", "required": true, "options": [{"name": "Hot", "price": 0}, {"name": "Cold", "price": 0}]}]},
-        {"id": "dr_004", "name": "Lemon Tea", "price": 2.50, "modifiers": [{"id": "temp", "name": "Temperature", "required": true, "options": [{"name": "Hot", "price": 0}, {"name": "Cold", "price": 0}]}]},
-        {"id": "dr_005", "name": "Ovaltine", "price": 2.50, "modifiers": [{"id": "temp", "name": "Temperature", "required": true, "options": [{"name": "Hot", "price": 0}, {"name": "Cold", "price": 0}]}]},
-        {"id": "dr_006", "name": "Almond Drink", "price": 2.50, "modifiers": [{"id": "temp", "name": "Temperature", "required": true, "options": [{"name": "Hot", "price": 0}, {"name": "Cold", "price": 0}]}]},
-        {"id": "dr_007", "name": "Red Bean Freeze", "price": 2.75, "modifiers": []},
-        {"id": "dr_008", "name": "Grass Jelly Freeze", "price": 2.75, "modifiers": []},
-        {"id": "dr_009", "name": "Lemon Green Tea", "price": 2.75, "modifiers": []},
-        {"id": "dr_010", "name": "Lemon Water", "price": 2.75, "modifiers": []},
-        {"id": "dr_011", "name": "Coke", "price": 2.00, "modifiers": []},
-        {"id": "dr_012", "name": "Diet Coke", "price": 2.00, "modifiers": []},
-        {"id": "dr_013", "name": "Sprite", "price": 2.00, "modifiers": []},
-        {"id": "dr_014", "name": "Passion Fruit Iced Tea", "price": 3.75, "modifiers": []},
-        {"id": "dr_015", "name": "Tangerine Lemon Iced Tea", "price": 3.75, "modifiers": []},
-        {"id": "dr_016", "name": "Green Apple Iced Tea", "price": 3.75, "modifiers": []},
-        {"id": "dr_017", "name": "Peach Iced Tea", "price": 3.75, "modifiers": []},
-        {"id": "dr_018", "name": "Lychee Iced Tea", "price": 3.75, "modifiers": []},
-        {"id": "dr_019", "name": "Honey Iced Tea", "price": 3.75, "modifiers": []},
-        {"id": "dr_020", "name": "Banana Berry Freeze", "description": "Banana, raspberry, blueberry", "price": 4.45, "modifiers": []},
-        {"id": "dr_021", "name": "Berry Best Freeze", "description": "Blueberry, strawberry, raspberry, banana", "price": 4.45, "modifiers": []},
-        {"id": "dr_022", "name": "Frozen Ice Mango Freeze", "description": "Mango, coconut, raspberry, banana", "price": 4.45, "modifiers": []},
-        {"id": "dr_023", "name": "Frozen Ice Raspberry Freeze", "description": "Raspberry, coconut, pineapple, banana", "price": 4.45, "modifiers": []},
-        {"id": "dr_024", "name": "Frozen Ice Strawberry Freeze", "description": "Strawberry, pineapple, coconut, banana", "price": 4.45, "modifiers": []},
-        {"id": "dr_025", "name": "Lychee Berry Freeze", "description": "Lychee, raspberry, blueberry", "price": 4.45, "modifiers": []},
-        {"id": "dr_026", "name": "Mango Berry Freeze", "description": "Mango, Raspberry, Blueberry", "price": 4.45, "modifiers": []},
-        {"id": "dr_027", "name": "Peach Berry Freeze", "description": "Peach, raspberry, blueberry", "price": 4.45, "modifiers": []},
-        {"id": "dr_028", "name": "Triple Berry Freeze", "description": "Blueberry, raspberry, strawberry", "price": 4.45, "modifiers": []},
-        {"id": "dr_029", "name": "Honey Citron Tea", "price": 2.00, "modifiers": [{"id": "temp", "name": "Temperature", "required": true, "options": [{"name": "Hot", "price": 0}, {"name": "Cold", "price": 0}]}]},
-        {"id": "dr_030", "name": "Honey Date Tea", "price": 2.00, "modifiers": [{"id": "temp", "name": "Temperature", "required": true, "options": [{"name": "Hot", "price": 0}, {"name": "Cold", "price": 0}]}]},
-        {"id": "dr_031", "name": "Honey Ginger Tea", "price": 2.00, "modifiers": [{"id": "temp", "name": "Temperature", "required": true, "options": [{"name": "Hot", "price": 0}, {"name": "Cold", "price": 0}]}]},
-        {"id": "dr_032", "name": "Watermelon Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_033", "name": "Papaya Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_034", "name": "Mango Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_035", "name": "Honeydew Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_036", "name": "Avocado Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_037", "name": "Banana Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_038", "name": "Peach Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_039", "name": "Strawberry Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_040", "name": "Longan Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_041", "name": "Lychee Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_042", "name": "Taro Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_043", "name": "Mango and Papaya Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_044", "name": "Longan and Lychee Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_045", "name": "Coconut Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_046", "name": "Red Bean and Coconut Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_047", "name": "Lychee and Honey Dew Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_048", "name": "Lychee and Mango Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_049", "name": "Mango and Honey Dew Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_050", "name": "Pineapple and Coconut Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_051", "name": "Strawberry and Banana Smoothie", "price": 3.95, "modifiers": []},
-        {"id": "dr_052", "name": "Fresh Mango w/ Small Tapioca", "price": 4.50, "modifiers": []},
-        {"id": "dr_053", "name": "Young-Mannosidase", "price": 4.50, "modifiers": []},
-        {"id": "dr_054", "name": "Mince Mango Freeze", "price": 4.50, "modifiers": []},
-        {"id": "dr_055", "name": "Taro Freeze", "price": 4.50, "modifiers": []},
-        {"id": "dr_056", "name": "Coconut Freeze", "price": 4.50, "modifiers": []},
-        {"id": "dr_057", "name": "Red Bean w/ Small Tapioca", "price": 3.50, "modifiers": []},
-        {"id": "dr_058", "name": "Grass Jelly w/ Small Tapioca", "price": 3.50, "modifiers": []},
-        {"id": "dr_059", "name": "Red Bean and Grass Jelly w/ Small Tapioca", "price": 3.50, "modifiers": []},
-        {"id": "dr_060", "name": "Mango and Papaya Milkshake", "price": 3.75, "modifiers": []},
-        {"id": "dr_061", "name": "Papaya Milkshake", "price": 3.75, "modifiers": []},
-        {"id": "dr_062", "name": "Mango Milkshake", "price": 3.75, "modifiers": []},
-        {"id": "dr_063", "name": "Strawberry Milkshake", "price": 3.75, "modifiers": []},
-        {"id": "dr_064", "name": "Banana Milkshake", "price": 3.75, "modifiers": []}
+        {
+          "id": "dr_001",
+          "name": "Coke",
+          "price": 2.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_002",
+          "name": "Mango Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_003",
+          "name": "Milk Tea",
+          "price": 4.50,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_004",
+          "name": "Sprite",
+          "price": 2.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_005",
+          "name": "Diet Coke",
+          "price": 2.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_006",
+          "name": "Strawberry & Banana Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_007",
+          "name": "Avocado Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_008",
+          "name": "Watermelon Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_009",
+          "name": "Strawberry Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_010",
+          "name": "Iced Hong Kong Style Milk Tea",
+          "price": 5.50,
+          "modifiers": []
+        },
+        {
+          "id": "dr_011",
+          "name": "Honey Lemon Tea",
+          "price": 4.50,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_012",
+          "name": "Lemon Tea",
+          "price": 4.50,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_013",
+          "name": "Ovaltine",
+          "price": 4.50,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_014",
+          "name": "Red Bean Freeze",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_015",
+          "name": "Grass Jelly Freeze",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_016",
+          "name": "Lemon Green Tea",
+          "price": 5.50,
+          "modifiers": []
+        },
+        {
+          "id": "dr_017",
+          "name": "Coffee",
+          "price": 4.50,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_018",
+          "name": "Orange Juice",
+          "price": 2.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_019",
+          "name": "Cranberry Juice",
+          "price": 2.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_020",
+          "name": "Lemon Water",
+          "price": 3.50,
+          "modifiers": []
+        },
+        {
+          "id": "dr_021",
+          "name": "Honey Citron Tea",
+          "price": 4.50,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_022",
+          "name": "Honey Date Tea",
+          "price": 4.50,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_023",
+          "name": "Honey Ginger Tea",
+          "price": 4.50,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_024",
+          "name": "Fresh Mango w/ Small Tapioca",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_025",
+          "name": "Young-Mannosidase",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_026",
+          "name": "Mince Mango Freeze",
+          "price": 7.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_027",
+          "name": "Taro Freeze",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_028",
+          "name": "Coconut Milk Freeze",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_029",
+          "name": "Red Bean w/ Small Tapioca",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_030",
+          "name": "Grass Jelly w/ Small Tapioca",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_031",
+          "name": "Red Bean & Grass Jelly w/ Small Tapioca",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_032",
+          "name": "Papaya Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_033",
+          "name": "Honeydew Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_034",
+          "name": "Banana Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_035",
+          "name": "Peach Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_036",
+          "name": "Longan Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_037",
+          "name": "Lychee Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_038",
+          "name": "Taro Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_039",
+          "name": "Mango & Papaya Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_040",
+          "name": "Longan & Lychee Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_041",
+          "name": "Coconut Milk Freeze",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_042",
+          "name": "Red Bean & Coconut Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_043",
+          "name": "Lychee & Honeydew Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_044",
+          "name": "Lychee & Mango Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_045",
+          "name": "Mango & Honeydew Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_046",
+          "name": "Pineapple & Coconut Smoothie",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_047",
+          "name": "Mango & Papaya Milk Shake",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_048",
+          "name": "Papaya Milk Shake",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_049",
+          "name": "Mango Milk Shake",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_050",
+          "name": "Strawberry Milk Shake",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_051",
+          "name": "Banana Milk Shake",
+          "price": 6.25,
+          "modifiers": []
+        },
+        {
+          "id": "dr_052",
+          "name": "Passion Fruit Tea",
+          "price": 6.25,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_053",
+          "name": "Tangerine Lemon Tea",
+          "price": 6.25,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_054",
+          "name": "Green Apple Tea",
+          "price": 6.25,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_055",
+          "name": "Peach Tea",
+          "price": 6.25,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_056",
+          "name": "Lychee Tea",
+          "price": 6.25,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_057",
+          "name": "Honey Tea",
+          "price": 6.25,
+          "modifiers": [
+            {
+              "id": "temp",
+              "name": "Temperature",
+              "required": false,
+              "options": [
+                {
+                  "name": "Hot",
+                  "price": 0
+                },
+                {
+                  "name": "Cold",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        }
       ]
     }
   ]
