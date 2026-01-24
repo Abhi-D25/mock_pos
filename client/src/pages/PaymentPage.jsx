@@ -4,6 +4,54 @@ import { ordersApi, paymentsApi } from '../services/api';
 import PaymentForm from '../components/PaymentForm';
 import OrderItemList from '../components/OrderItemList';
 
+const formatChicagoTime = (dateString, includeTimeZone = false) => {
+  if (!dateString) return '';
+  const options = {
+    timeZone: 'America/Chicago',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true
+  };
+  if (includeTimeZone) {
+    options.timeZoneName = 'short';
+  }
+  return new Date(dateString).toLocaleTimeString('en-US', options);
+};
+
+const getEstimatedPickupTime = (createdAt, items) => {
+  if (!createdAt || !items) return '';
+
+  const totalItems = items.reduce((sum, item) => sum + (Number(item.quantity) || 1), 0);
+  const createdTime = new Date(createdAt).getTime();
+
+  let minMinutes, maxMinutes;
+
+  if (totalItems <= 3) {
+    minMinutes = 20;
+    maxMinutes = 25;
+  } else if (totalItems <= 6) {
+    minMinutes = 35;
+    maxMinutes = 40;
+  } else {
+    // 7-10 items logic (applies to 7+ for safety)
+    minMinutes = 45;
+    maxMinutes = 60;
+  }
+
+  const minTime = new Date(createdTime + minMinutes * 60000);
+  const maxTime = new Date(createdTime + maxMinutes * 60000);
+
+  // Format just the time part as we are likely on the same day
+  const format = (date) => date.toLocaleTimeString('en-US', {
+    timeZone: 'America/Chicago',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true
+  });
+
+  return `${format(minTime)} - ${format(maxTime)}`;
+};
+
 export default function PaymentPage() {
   const { orderId } = useParams();
   const [order, setOrder] = useState(null);
@@ -25,7 +73,7 @@ export default function PaymentPage() {
 
       if (response.order.status !== 'pending_payment') {
         if (response.order.status === 'paid' || response.order.status === 'preparing' ||
-            response.order.status === 'ready' || response.order.status === 'completed') {
+          response.order.status === 'ready' || response.order.status === 'completed') {
           setPaymentSuccess(true);
         }
       }
@@ -104,12 +152,10 @@ export default function PaymentPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto border-4 border-red-500 rounded-xl p-6 bg-white shadow-lg">
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-primary mb-2">🍜 Ming Hin Cuisine</h1>
-          <p className="text-gray-600">333 E Benton Place, Chicago, IL 60601</p>
-          <p className="text-gray-600">(312) 228-1333</p>
         </div>
 
         {/* Order Summary */}
@@ -120,6 +166,14 @@ export default function PaymentPage() {
             <div className="flex justify-between text-sm mb-2">
               <span className="text-gray-600">Order ID</span>
               <span className="font-mono font-medium">{order.id}</span>
+            </div>
+            <div className="flex justify-between text-sm mb-2">
+              <span className="text-gray-600">Order Created</span>
+              <span className="font-medium">{formatChicagoTime(order.created_at, true)}</span>
+            </div>
+            <div className="flex justify-between text-sm mb-2">
+              <span className="text-gray-600">Est. Pickup</span>
+              <span className="font-medium">{getEstimatedPickupTime(order.created_at, order.items)}</span>
             </div>
             <div className="flex justify-between text-sm mb-2">
               <span className="text-gray-600">Customer</span>
