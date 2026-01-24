@@ -9,14 +9,13 @@ const parseUtcDate = (dateString) => {
   // SQLite returns "YYYY-MM-DD HH:MM:SS" which is UTC but missing the 'Z'
   // We normalize it to ISO format "YYYY-MM-DDTHH:MM:SSZ"
   let normalized = dateString.replace(' ', 'T');
-  if (!normalized.endsWith('Z') && !normalized.includes('+') && !normalized.includes('-')) {
+
+  // Check if it already has timezone info (Z or +HH:MM or -HH:MM)
+  // We use a regex to look for Z or offset at the end
+  const hasTimezone = /Z$|[+-]\d{2}:?\d{2}$/.test(normalized);
+
+  if (!hasTimezone) {
     normalized += 'Z';
-  } else if (!normalized.endsWith('Z') && !normalized.includes('+')) {
-    // Handle cases where it might have trailing -XX:XX but we want to be safe, 
-    // actually, if it has - or +, Date() parses correctly.
-    // The main issue is "YYYY-MM-DD HH:MM:SS" being treated as local.
-    // If it has - (e.g. 2026-01-24), the replace space with T is good.
-    // If it's strictly the SQLite format, it won't have offset.
   }
   return new Date(normalized);
 };
