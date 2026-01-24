@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import { createServer } from 'http';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { existsSync } from 'fs';
 import { initWebSocket, getConnectionStats } from './services/websocket.js';
 import { authenticateApiKey } from './middleware/auth.js';
 import ordersRouter from './routes/orders.js';
@@ -18,11 +19,34 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
+// CORS configuration for production
+const allowedOrigins = [
+  process.env.CORS_ORIGIN,
+  'http://localhost:5173',
+  'http://localhost:3000'
+].filter(Boolean);
+
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
+  origin: function(origin, callback) {
+    // Allow requests with no origin (mobile apps, curl, etc.)
+    if (!origin) return callback(null, true);
+    
+    // Check if origin is in allowed list
+    if (allowedOrigins.some(allowed => origin.startsWith(allowed.replace(/\/$/, '')))) {
+      return callback(null, true);
+    }
+    
+    // In production, also allow railway.app domains
+    if (origin.includes('.up.railway.app') || origin.includes('.railway.app')) {
+      return callback(null, true);
+    }
+    
+    // Allow same-origin requests
+    callback(null, true);
+  },
   credentials: true
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -38,23 +62,33 @@ app.get('/health', (req, res) => {
   res.json({
     status: 'healthy',
     timestamp: new Date().toISOString(),
-    websocket: wsStats
+    websocket: wsStats,
+    environment: process.env.NODE_ENV || 'development'
   });
 });
 
-// API routes (with auth handled inside routes for granular control)
+// API routes
 app.use('/api/orders', ordersRouter);
-app.use('/api/payments', paymentsRouter); // Payment page is public
-app.use('/api/menu', menuRouter); // Menu is public
+app.use('/api/payments', paymentsRouter);
+app.use('/api/menu', menuRouter);
 
 // Serve static files from the React app (built frontend)
 const clientBuildPath = join(__dirname, '../client/dist');
-app.use(express.static(clientBuildPath));
 
-// Serve React app for all non-API routes (SPA fallback)
-app.get('*', (req, res) => {
-  res.sendFile(join(clientBuildPath, 'index.html'));
-});
+if (existsSync(clientBuildPath)) {
+  console.log('📁 Serving static files from:', clientBuildPath);
+  app.use(express.static(clientBuildPath));
+  
+  // Serve React app for all non-API routes (SPA fallback)
+  app.get('*', (req, res) => {
+    if (!req.path.startsWith('/api') && !req.path.startsWith('/health')) {
+      res.sendFile(join(clientBuildPath, 'index.html'));
+    }
+  });
+} else {
+  console.log('⚠️  Client build not found at:', clientBuildPath);
+  console.log('   Run "npm run build" to create production build');
+}
 
 // Error handler
 app.use((err, req, res, next) => {
@@ -73,16 +107,16 @@ const server = createServer(app);
 initWebSocket(server);
 
 // Start server
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log('');
   console.log('🍜 ═══════════════════════════════════════════════════════');
   console.log('   Ming Hin Cuisine - Mock POS System');
   console.log('   ═══════════════════════════════════════════════════════');
   console.log('');
-  console.log(`   🚀 Server running on: http://localhost:${PORT}`);
-  console.log(`   🔌 WebSocket available on: ws://localhost:${PORT}`);
-  console.log(`   🌐 CORS enabled for: ${process.env.CORS_ORIGIN}`);
-  console.log(`   🔑 API Key: ${process.env.API_KEY}`);
+  console.log(`   🚀 Server running on: http://0.0.0.0:${PORT}`);
+  console.log(`   🔌 WebSocket available on same port`);
+  console.log(`   🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`   🔑 API Key: ${process.env.API_KEY ? '***configured***' : 'NOT SET!'}`);
   console.log('');
   console.log('   📚 API Endpoints:');
   console.log(`      POST   /api/orders          - Create new order`);

@@ -11,5 +11,18 @@ export default defineConfig({
         changeOrigin: true
       }
     }
-  }
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+    // Ensure assets are properly referenced
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
+  },
+  // Base URL for production
+  base: '/'
 });
