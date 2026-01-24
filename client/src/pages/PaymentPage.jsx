@@ -4,8 +4,27 @@ import { ordersApi, paymentsApi } from '../services/api';
 import PaymentForm from '../components/PaymentForm';
 import OrderItemList from '../components/OrderItemList';
 
+const parseUtcDate = (dateString) => {
+  if (!dateString) return null;
+  // SQLite returns "YYYY-MM-DD HH:MM:SS" which is UTC but missing the 'Z'
+  // We normalize it to ISO format "YYYY-MM-DDTHH:MM:SSZ"
+  let normalized = dateString.replace(' ', 'T');
+  if (!normalized.endsWith('Z') && !normalized.includes('+') && !normalized.includes('-')) {
+    normalized += 'Z';
+  } else if (!normalized.endsWith('Z') && !normalized.includes('+')) {
+    // Handle cases where it might have trailing -XX:XX but we want to be safe, 
+    // actually, if it has - or +, Date() parses correctly.
+    // The main issue is "YYYY-MM-DD HH:MM:SS" being treated as local.
+    // If it has - (e.g. 2026-01-24), the replace space with T is good.
+    // If it's strictly the SQLite format, it won't have offset.
+  }
+  return new Date(normalized);
+};
+
 const formatChicagoTime = (dateString, includeTimeZone = false) => {
-  if (!dateString) return '';
+  const date = parseUtcDate(dateString);
+  if (!date) return '';
+
   const options = {
     timeZone: 'America/Chicago',
     hour: 'numeric',
@@ -15,14 +34,15 @@ const formatChicagoTime = (dateString, includeTimeZone = false) => {
   if (includeTimeZone) {
     options.timeZoneName = 'short';
   }
-  return new Date(dateString).toLocaleTimeString('en-US', options);
+  return date.toLocaleTimeString('en-US', options);
 };
 
 const getEstimatedPickupTime = (createdAt, items) => {
-  if (!createdAt || !items) return '';
+  const date = parseUtcDate(createdAt);
+  if (!date || !items) return '';
 
   const totalItems = items.reduce((sum, item) => sum + (Number(item.quantity) || 1), 0);
-  const createdTime = new Date(createdAt).getTime();
+  const createdTime = date.getTime();
 
   let minMinutes, maxMinutes;
 
@@ -42,7 +62,7 @@ const getEstimatedPickupTime = (createdAt, items) => {
   const maxTime = new Date(createdTime + maxMinutes * 60000);
 
   // Format just the time part as we are likely on the same day
-  const format = (date) => date.toLocaleTimeString('en-US', {
+  const format = (d) => d.toLocaleTimeString('en-US', {
     timeZone: 'America/Chicago',
     hour: 'numeric',
     minute: '2-digit',
