@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS orders (
     subtotal REAL NOT NULL,
     tax_rate REAL NOT NULL DEFAULT 0.1025,
     tax_amount REAL NOT NULL,
+    delivery_fee REAL DEFAULT 0,
     total REAL NOT NULL,
     status TEXT NOT NULL DEFAULT 'pending_payment'
         CHECK(status IN ('pending_payment', 'paid', 'preparing', 'ready', 'completed', 'cancelled')),

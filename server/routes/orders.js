@@ -46,7 +46,7 @@ router.post('/', authenticateApiKey, async (req, res) => {
 
     // Calculate totals using enriched items
     const taxRate = orderData.tax_rate || getTaxRate();
-    const totals = calculateTotals(enrichedItems, taxRate);
+    const totals = calculateTotals(enrichedItems, taxRate, orderData.order_type);
 
     // Update order data with enriched items and calculated totals
     const enrichedOrderData = {

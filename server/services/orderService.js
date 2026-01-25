@@ -30,17 +30,19 @@ function generateOrderId() {
 }
 
 // Calculate totals
-function calculateOrderTotals(items, taxRate = 0.1025) {
+function calculateOrderTotals(items, taxRate = 0.1175, orderType = 'pickup') {
   const subtotal = items.reduce((sum, item) => {
     return sum + (item.quantity * item.unit_price);
   }, 0);
 
+  const deliveryFee = orderType === 'delivery' ? 4.00 : 0;
   const taxAmount = subtotal * taxRate;
-  const total = subtotal + taxAmount;
+  const total = subtotal + taxAmount + deliveryFee;
 
   return {
     subtotal: parseFloat(subtotal.toFixed(2)),
     tax_amount: parseFloat(taxAmount.toFixed(2)),
+    delivery_fee: parseFloat(deliveryFee.toFixed(2)),
     total: parseFloat(total.toFixed(2))
   };
 }
@@ -48,17 +50,18 @@ function calculateOrderTotals(items, taxRate = 0.1025) {
 // Create a new order
 export function createOrder(orderData) {
   const orderId = generateOrderId();
-  const { subtotal, tax_amount, total } = calculateOrderTotals(
+  const { subtotal, tax_amount, delivery_fee, total } = calculateOrderTotals(
     orderData.items,
-    orderData.tax_rate || 0.1025
+    orderData.tax_rate || 0.1175,
+    orderData.order_type
   );
 
   const insertOrder = db.prepare(`
     INSERT INTO orders (
       id, source, customer_name, customer_phone, order_type,
       scheduled_time, special_instructions, subtotal, tax_rate,
-      tax_amount, total, status, created_at, updated_at
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'))
+      tax_amount, delivery_fee, total, status, created_at, updated_at
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'))
   `);
 
   const insertOrderItem = db.prepare(`
@@ -79,8 +82,9 @@ export function createOrder(orderData) {
       orderData.scheduled_time || null,
       orderData.special_instructions || null,
       subtotal,
-      orderData.tax_rate || 0.1025,
+      orderData.tax_rate || 0.1175,
       tax_amount,
+      delivery_fee,
       total,
       'pending_payment'
     );

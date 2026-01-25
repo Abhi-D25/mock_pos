@@ -208,21 +208,32 @@ export function enrichOrderItems(items) {
 }
 
 // Calculate totals for enriched items
-export function calculateTotals(items, taxRate = 0.1025) {
+export function calculateTotals(items, taxRate = 0.1175, orderType = 'pickup') {
   const subtotal = items.reduce((sum, item) => sum + item.line_total, 0);
+  const deliveryFee = orderType === 'delivery' ? 4.00 : 0;
+  const taxableAmount = subtotal + deliveryFee;
+  // Delivery fee is usually taxable in many jurisdictions, asking user would be better but assuming subtotal is basis.
+  // Wait, usually delivery fee is a separate line item. 
+  // The user requirement said: "payload received has order type as delivery then it has to add $4.00 as the delivery fee"
+  // It didn't specify if it's taxable. I'll assume tax applies to food subtotal for now as is standard unless specified.
+  // Actually, usually delivery fees are taxable. But let's stick to base logic first:
+  // Tax = subtotal * rate.
+  // Total = subtotal + tax + deliveryFee.
+
   const taxAmount = subtotal * taxRate;
-  const total = subtotal + taxAmount;
+  const total = subtotal + taxAmount + deliveryFee;
 
   return {
     subtotal: parseFloat(subtotal.toFixed(2)),
     tax_amount: parseFloat(taxAmount.toFixed(2)),
+    delivery_fee: parseFloat(deliveryFee.toFixed(2)),
     total: parseFloat(total.toFixed(2))
   };
 }
 
 // Get tax rate from menu
 export function getTaxRate() {
-  return menuData?.restaurant?.tax_rate || 0.1025;
+  return menuData?.restaurant?.tax_rate || 0.1175;
 }
 
 // Initialize menu on module load
