@@ -79,6 +79,13 @@ export default function PaymentPage() {
   const [processing, setProcessing] = useState(false);
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [paymentError, setPaymentError] = useState(null);
+  const [deliveryAddress, setDeliveryAddress] = useState({
+    street: '',
+    city: '',
+    state: '',
+    zipCode: ''
+  });
+  const [addressErrors, setAddressErrors] = useState({});
 
   useEffect(() => {
     loadOrder();
@@ -103,16 +110,54 @@ export default function PaymentPage() {
     }
   };
 
+  const validateAddress = () => {
+    const errors = {};
+    if (!deliveryAddress.street.trim()) {
+      errors.street = 'Street address is required';
+    }
+    if (!deliveryAddress.city.trim()) {
+      errors.city = 'City is required';
+    }
+    if (!deliveryAddress.state.trim()) {
+      errors.state = 'State is required';
+    }
+    if (!deliveryAddress.zipCode.trim()) {
+      errors.zipCode = 'ZIP code is required';
+    } else if (!/^\d{5}(-\d{4})?$/.test(deliveryAddress.zipCode)) {
+      errors.zipCode = 'Invalid ZIP code format';
+    }
+    return errors;
+  };
+
   const handlePayment = async (cardData) => {
     setProcessing(true);
     setPaymentError(null);
+    setAddressErrors({});
+
+    // Validate address for delivery orders
+    if (order.order_type === 'delivery') {
+      const errors = validateAddress();
+      if (Object.keys(errors).length > 0) {
+        setAddressErrors(errors);
+        setProcessing(false);
+        setPaymentError('Please fill in all required delivery address fields.');
+        return;
+      }
+    }
 
     try {
-      const response = await paymentsApi.process({
+      const paymentData = {
         order_id: orderId,
         method: 'card',
         card: cardData
-      });
+      };
+
+      // Include delivery address if it's a delivery order
+      if (order.order_type === 'delivery') {
+        paymentData.delivery_address = deliveryAddress;
+      }
+
+      const response = await paymentsApi.process(paymentData);
 
       if (response.success) {
         setPaymentSuccess(true);
@@ -222,6 +267,12 @@ export default function PaymentPage() {
                 <span className="text-gray-600">Subtotal</span>
                 <span className="font-medium">${order.subtotal.toFixed(2)}</span>
               </div>
+              {order.delivery_fee > 0 && (
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-600">Delivery Fee</span>
+                  <span className="font-medium">${order.delivery_fee.toFixed(2)}</span>
+                </div>
+              )}
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">
                   Tax ({(order.tax_rate * 100).toFixed(2)}%)
@@ -235,6 +286,102 @@ export default function PaymentPage() {
             </div>
           </div>
         </div>
+
+        {/* Delivery Address Form (only for delivery orders) */}
+        {order.order_type === 'delivery' && (
+          <div className="card mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Delivery Address</h2>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Street Address <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  value={deliveryAddress.street}
+                  onChange={(e) => {
+                    setDeliveryAddress(prev => ({ ...prev, street: e.target.value }));
+                    if (addressErrors.street) {
+                      setAddressErrors(prev => ({ ...prev, street: null }));
+                    }
+                  }}
+                  placeholder="123 Main St"
+                  className={`input ${addressErrors.street ? 'border-red-500' : ''}`}
+                />
+                {addressErrors.street && (
+                  <p className="text-red-500 text-xs mt-1">{addressErrors.street}</p>
+                )}
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    City <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    value={deliveryAddress.city}
+                    onChange={(e) => {
+                      setDeliveryAddress(prev => ({ ...prev, city: e.target.value }));
+                      if (addressErrors.city) {
+                        setAddressErrors(prev => ({ ...prev, city: null }));
+                      }
+                    }}
+                    placeholder="Chicago"
+                    className={`input ${addressErrors.city ? 'border-red-500' : ''}`}
+                  />
+                  {addressErrors.city && (
+                    <p className="text-red-500 text-xs mt-1">{addressErrors.city}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    State <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    value={deliveryAddress.state}
+                    onChange={(e) => {
+                      setDeliveryAddress(prev => ({ ...prev, state: e.target.value }));
+                      if (addressErrors.state) {
+                        setAddressErrors(prev => ({ ...prev, state: null }));
+                      }
+                    }}
+                    placeholder="IL"
+                    className={`input ${addressErrors.state ? 'border-red-500' : ''}`}
+                    maxLength="2"
+                  />
+                  {addressErrors.state && (
+                    <p className="text-red-500 text-xs mt-1">{addressErrors.state}</p>
+                  )}
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  ZIP Code <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  value={deliveryAddress.zipCode}
+                  onChange={(e) => {
+                    setDeliveryAddress(prev => ({ ...prev, zipCode: e.target.value }));
+                    if (addressErrors.zipCode) {
+                      setAddressErrors(prev => ({ ...prev, zipCode: null }));
+                    }
+                  }}
+                  placeholder="60601"
+                  className={`input ${addressErrors.zipCode ? 'border-red-500' : ''}`}
+                  maxLength="10"
+                />
+                {addressErrors.zipCode && (
+                  <p className="text-red-500 text-xs mt-1">{addressErrors.zipCode}</p>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Payment Form */}
         <div className="card">
