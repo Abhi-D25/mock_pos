@@ -50,6 +50,57 @@ function normalizeItemName(name) {
   return normalized;
 }
 
+// Calculate token-based similarity between two strings
+// Returns a score between 0 and 1, where 1 is perfect match
+function calculateTokenSimilarity(str1, str2) {
+  if (!str1 || !str2) return 0;
+
+  // Tokenize: split by spaces and common delimiters
+  const tokens1 = str1.toLowerCase().split(/[\s\-_]+/).filter(t => t.length > 0);
+  const tokens2 = str2.toLowerCase().split(/[\s\-_]+/).filter(t => t.length > 0);
+
+  if (tokens1.length === 0 || tokens2.length === 0) return 0;
+
+  // Count exact and partial matches with different weights
+  let exactMatches = 0;
+  let partialMatches = 0;
+
+  for (const token1 of tokens1) {
+    let foundExact = false;
+    let foundPartial = false;
+
+    for (const token2 of tokens2) {
+      if (token1 === token2) {
+        foundExact = true;
+        break;
+      } else if (token1.length > 2 && token2.length > 2) {
+        // For partial matches, require significant overlap (longer token contains shorter)
+        if (token2.includes(token1) || token1.includes(token2)) {
+          // Only count if the match is substantial (>70% of shorter token)
+          const shorter = Math.min(token1.length, token2.length);
+          const longer = Math.max(token1.length, token2.length);
+          if (shorter / longer >= 0.7) {
+            foundPartial = true;
+          }
+        }
+      }
+    }
+
+    if (foundExact) {
+      exactMatches++;
+    } else if (foundPartial) {
+      partialMatches++;
+    }
+  }
+
+  // Weight exact matches more heavily than partial matches
+  // Exact match = 1.0, Partial match = 0.5
+  const totalScore = exactMatches + (partialMatches * 0.5);
+  const maxScore = tokens1.length;
+
+  return totalScore / maxScore;
+}
+
 // Build price lookup map
 function buildPriceMap() {
   priceMap.clear();
@@ -121,29 +172,61 @@ export function lookupPrice(itemName) {
     };
   }
 
-  // Try partial matching (if query is contained in menu item)
-  const partialMatches = [];
+  // Try fuzzy matching using token-based similarity
+  const fuzzyMatches = [];
+  const SIMILARITY_THRESHOLD = 0.65; // 65% token match required
+
   for (const [key, item] of priceMap.entries()) {
+    // First try simple substring containment for backwards compatibility
     if (key.includes(normalized) || normalized.includes(key)) {
-      partialMatches.push({ key, item, score: key.length });
+      fuzzyMatches.push({
+        key,
+        item,
+        similarity: 0.95, // High score for substring matches
+        matchType: 'substring'
+      });
+      continue;
+    }
+
+    // Calculate token-based similarity using original names
+    const similarity = calculateTokenSimilarity(itemName, item.originalName);
+
+    if (similarity >= SIMILARITY_THRESHOLD) {
+      fuzzyMatches.push({
+        key,
+        item,
+        similarity,
+        matchType: 'token'
+      });
     }
   }
 
-  // If we have partial matches, use the closest one (shortest key = most specific)
-  if (partialMatches.length > 0) {
-    // Sort by score (prefer shorter, more specific matches)
-    partialMatches.sort((a, b) => a.score - b.score);
-    const bestMatch = partialMatches[0].item;
+  // If we have fuzzy matches, use the best one (highest similarity)
+  if (fuzzyMatches.length > 0) {
+    // Sort by similarity (descending), then by key length (ascending) for ties
+    fuzzyMatches.sort((a, b) => {
+      if (Math.abs(a.similarity - b.similarity) > 0.01) {
+        return b.similarity - a.similarity; // Higher similarity first
+      }
+      return a.key.length - b.key.length; // Shorter/more specific first
+    });
 
-    console.log(`[Menu Service] Partial match for "${itemName}" -> "${bestMatch.originalName}"`);
+    const bestMatch = fuzzyMatches[0];
+    const matchTypeLabel = bestMatch.matchType === 'substring' ? 'Partial' : 'Fuzzy';
+
+    console.log(
+      `[Menu Service] ${matchTypeLabel} match for "${itemName}" -> "${bestMatch.item.originalName}" ` +
+      `(similarity: ${(bestMatch.similarity * 100).toFixed(1)}%)`
+    );
 
     return {
       found: true,
-      price: bestMatch.price,
-      matchedName: bestMatch.originalName,
-      menuItemId: bestMatch.id,
-      category: bestMatch.category,
-      partialMatch: true
+      price: bestMatch.item.price,
+      matchedName: bestMatch.item.originalName,
+      menuItemId: bestMatch.item.id,
+      category: bestMatch.item.category,
+      partialMatch: true,
+      similarity: bestMatch.similarity
     };
   }
 
