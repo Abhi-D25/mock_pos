@@ -10,211 +10,3537 @@
       "id": "bogo",
       "name": "BOGO Free (买一赠一)",
       "items": [
-        { "id": "bogo_001", "name": "Napa Cabbage (上汤白菜)", "price": 11.99, "modifiers": [] },
-        { "id": "bogo_002", "name": "Brown Sugar Bubble Tea (招牌脏脏奶茶)", "price": 5.50, "modifiers": [] }
+        {
+          "id": "bogo_001",
+          "name": "Napa Cabbage (上汤白菜)",
+          "price": 11.99,
+          "modifiers": []
+        },
+        {
+          "id": "bogo_002",
+          "name": "Brown Sugar Bubble Tea (招牌脏脏奶茶)",
+          "price": 5.5,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "No Sugar / 无糖（0%）",
+                  "price": 0
+                },
+                {
+                  "name": "Light Sugar / 微糖（25%）",
+                  "price": 0
+                },
+                {
+                  "name": "Less Sugar / 半糖（50%）",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Boba Exchange To Brown Sugar Boba / 珍珠换黑糖脆波波",
+                  "price": 0.5
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "special_combo",
       "name": "Special Combo (超值套餐)",
       "items": [
-        { "id": "combo_001", "name": "Selected For 4 (精选四人餐)", "price": 129.00, "modifiers": [] },
-        { "id": "combo_002", "name": "Combo Meal For 2 (新年雙人便當套餐)", "price": 44.99, "modifiers": [] },
-        { "id": "combo_003", "name": "Burger Combo (汉堡套餐)", "price": 15.00, "modifiers": [] },
-        { "id": "combo_004", "name": "Combo Street Food Meal For 4 (四人小吃套餐)", "price": 85.99, "modifiers": [] },
-        { "id": "combo_005", "name": "Combo Meal For 4 (四人便當套餐)", "price": 79.99, "modifiers": [] },
-        { "id": "combo_006", "name": "Combo Classic Meal For 2 (雙人好初套餐)", "price": 49.99, "modifiers": [] }
+        {
+          "id": "combo_001",
+          "name": "Selected For 4 (精选四人餐)",
+          "price": 129,
+          "modifiers": [
+            {
+              "id": "combo_content",
+              "name": "Combo Content (必选套餐内容)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Combo Salad (西贝大拌菜)",
+                  "price": 0
+                },
+                {
+                  "name": "Mongolian Beef Bone Ribs x2 (蒙古牛大骨（牛肋骨）（2根）)",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "combo_002",
+          "name": "Combo Meal For 2 (新年双人便当套餐)",
+          "price": 44.99,
+          "modifiers": [
+            {
+              "id": "combo_content",
+              "name": "Combo Content (必选套餐内容)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Combo Salad (西贝大拌菜)",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "drinks_choose2",
+              "name": "Drinks — Choose Two (饮料 — 任选2)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Brown Sugar Boba Milk Tea / 黑糖脏脏茶",
+                  "price": 0.5
+                },
+                {
+                  "name": "Roasted Oolong Boba Milk Tea / 碳焙乌龙珍珠奶茶",
+                  "price": 0
+                },
+                {
+                  "name": "Jasmine Green Boba Milk Tea / 茉香珍奶",
+                  "price": 0
+                },
+                {
+                  "name": "Osmanthus Oolong Orange Fruit Tea / 桂馥柳橙水果茶",
+                  "price": 0
+                },
+                {
+                  "name": "Osmanthus Oolong Grapefruit Fruit Tea / 桂馥西柚水果茶",
+                  "price": 0
+                },
+                {
+                  "name": "Strawberry Milk Cloud / 草莓脏吸吸",
+                  "price": 0
+                },
+                {
+                  "name": "Mango Milk Cloud / 芒果脏吸吸",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "combo_003",
+          "name": "Burger Combo (汉堡套餐)",
+          "price": 15,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "id": "combo",
+      "name": "Combo (组合)",
+      "items": [
+        {
+          "id": "combo_004",
+          "name": "Combo Street Food Meal For 4 (四人小吃套餐)",
+          "price": 85.99,
+          "modifiers": [
+            {
+              "id": "drinks_choose4",
+              "name": "Drinks — Choose Four (饮料 — 任选4)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Brown Sugar Boba Milk Tea / 黑糖脏脏茶",
+                  "price": 0
+                },
+                {
+                  "name": "Boba Milk Tea / 珍珠奶茶",
+                  "price": 0
+                },
+                {
+                  "name": "Roasted Oolong Boba Milk Tea / 碳焙乌龙珍珠奶茶",
+                  "price": 0
+                },
+                {
+                  "name": "Jasmine Green Boba Milk Tea / 茉香珍奶",
+                  "price": 0
+                },
+                {
+                  "name": "Osmanthus Oolong Orange Fruit Tea / 桂馥柳橙水果茶",
+                  "price": 0
+                },
+                {
+                  "name": "Osmanthus Oolong Grapefruit Fruit Tea / 桂馥西柚水果茶",
+                  "price": 0
+                },
+                {
+                  "name": "Strawberry Milk Cloud / 草莓脏吸吸",
+                  "price": 0
+                },
+                {
+                  "name": "Mango Milk Cloud / 芒果脏吸吸",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "combo_005",
+          "name": "Combo Meal For 4 (四人便当套餐)",
+          "price": 79.99,
+          "modifiers": [
+            {
+              "id": "drinks_choose4",
+              "name": "Drinks — Choose Four (饮料 — 任选4)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Brown Sugar Boba Milk Tea / 黑糖脏脏茶",
+                  "price": 0
+                },
+                {
+                  "name": "Boba Milk Tea / 珍珠奶茶",
+                  "price": 0
+                },
+                {
+                  "name": "Roasted Oolong Boba Milk Tea / 碳焙乌龙珍珠奶茶",
+                  "price": 0
+                },
+                {
+                  "name": "Jasmine Green Boba Milk Tea / 茉香珍奶",
+                  "price": 0
+                },
+                {
+                  "name": "Osmanthus Oolong Orange Fruit Tea / 桂馥柳橙水果茶",
+                  "price": 0
+                },
+                {
+                  "name": "Osmanthus Oolong Grapefruit Fruit Tea / 桂馥西柚水果茶",
+                  "price": 0
+                },
+                {
+                  "name": "Strawberry Milk Cloud / 草莓脏吸吸",
+                  "price": 0
+                },
+                {
+                  "name": "Mango Milk Cloud / 芒果脏吸吸",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "combo_006",
+          "name": "Combo Classic Meal For 2 (双人好初套餐)",
+          "price": 49.99,
+          "modifiers": [
+            {
+              "id": "combo_content",
+              "name": "Combo Content (必选套餐内容)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Mongolian Beef Bone Ribs x2 (蒙古牛大骨（牛肋骨）（2根）)",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "drinks_choose2",
+              "name": "Drinks — Choose Two (饮料 — 任选2)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Brown Sugar Boba Milk Tea / 黑糖脏脏茶",
+                  "price": 0.5
+                },
+                {
+                  "name": "Roasted Oolong Boba Milk Tea / 碳焙乌龙珍珠奶茶",
+                  "price": 0
+                },
+                {
+                  "name": "Jasmine Green Boba Milk Tea / 茉香珍奶",
+                  "price": 0
+                },
+                {
+                  "name": "Osmanthus Oolong Orange Fruit Tea / 桂馥柳橙水果茶",
+                  "price": 0
+                },
+                {
+                  "name": "Osmanthus Oolong Grapefruit Fruit Tea / 桂馥西柚水果茶",
+                  "price": 0
+                },
+                {
+                  "name": "Strawberry Milk Cloud / 草莓脏吸吸",
+                  "price": 0
+                },
+                {
+                  "name": "Mango Milk Cloud / 芒果脏吸吸",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "combo_007",
+          "name": "Hot Black Tea Latte (红茶拿铁)",
+          "price": 10,
+          "modifiers": [
+            {
+              "id": "toppings",
+              "name": "Toppings (奶茶小料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Pearl / 珍珠",
+                  "price": 1
+                },
+                {
+                  "name": "Coconut Jelly / 椰果",
+                  "price": 1
+                },
+                {
+                  "name": "Grape Pulp / 葡萄果肉",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "tea_latte",
       "name": "Tea Latte (鲜奶茶)",
       "items": [
-        { "id": "tea_001", "name": "Hot Black Tea Latte (红茶拿铁)", "price": 10.00, "modifiers": [] },
-        { "id": "tea_002", "name": "Tsao (左宗鸡)", "price": 4.00, "modifiers": [] }
+        {
+          "id": "tea_001",
+          "name": "Tsao (左宗鸡)",
+          "price": 4,
+          "modifiers": [
+            {
+              "id": "cup",
+              "name": "Cup Type (杯型)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Large Cup / 大杯",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "flavor",
+              "name": "Flavor (口味)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Garlic / 田园沙拉酱",
+                  "price": 2
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "special_selection",
       "name": "Special Selection (甄选奶茶)",
       "items": [
-        { "id": "sel_001", "name": "Cheese Roasted Oolong Tea (奶盖炭熔乌龙茶)", "price": 5.50, "modifiers": [] },
-        { "id": "sel_002", "name": "Cheese Jasmine Green Tea (奶盖茉莉花绿茶)", "price": 5.50, "modifiers": [] },
-        { "id": "sel_003", "name": "Peach Oolong Cheese Tea (芝士蜜桃烏龍茶)", "price": 5.50, "modifiers": [] },
-        { "id": "sel_004", "name": "Cheese High Mountain Tea (奶盖文青包种茶)", "price": 5.50, "modifiers": [] },
-        { "id": "sel_005", "name": "High Mountain Cheese Tea (奶盖文青包种茶)", "price": 5.50, "modifiers": [] },
-        { "id": "sel_006", "name": "Osmanthus Oolong Cheese Tea (奶蓋桂花烏龍茶)", "price": 5.50, "modifiers": [] },
-        { "id": "sel_007", "name": "Wonderland Milk Tea (梦游奶茶)", "price": 5.99, "modifiers": [] },
-        { "id": "sel_008", "name": "Double Black Sugar Boba Milk Tea (双倍特浓黑糖脏脏茶)", "price": 5.95, "modifiers": [] },
-        { "id": "sel_009", "name": "High Mountain Boba Milk Tea (文青珍奶)", "price": 6.45, "modifiers": [] },
-        { "id": "sel_010", "name": "Roasted Oolong Boba Milk Tea (炭焙乌龙珍奶)", "price": 6.45, "modifiers": [] }
+        {
+          "id": "sel_001",
+          "name": "Cheese Roasted Oolong Tea (奶盖炭熔乌龙茶)",
+          "price": 5.5,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "No Sugar / 无糖（0%）",
+                  "price": 0
+                },
+                {
+                  "name": "Light Sugar / 微糖（25%）",
+                  "price": 0
+                },
+                {
+                  "name": "Less Sugar / 半糖（50%）",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "cheese_foam",
+              "name": "Add Cheese Foam (加奶盖)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Add Cheese Foam / 加奶盖",
+                  "price": 0
+                },
+                {
+                  "name": "Extra Cheese Foam / 额外加奶盖",
+                  "price": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sel_002",
+          "name": "Cheese Jasmine Green Tea (奶盖茉莉花绿茶)",
+          "price": 5.5,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "No Sugar / 无糖（0%）",
+                  "price": 0
+                },
+                {
+                  "name": "Light Sugar / 微糖（25%）",
+                  "price": 0
+                },
+                {
+                  "name": "Less Sugar / 半糖（50%）",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "cheese_foam",
+              "name": "Add Cheese Foam (加奶盖)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Add Cheese Foam / 加奶盖",
+                  "price": 0
+                },
+                {
+                  "name": "Extra Cheese Foam / 额外加奶盖",
+                  "price": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sel_003",
+          "name": "Peach Oolong Cheese Tea (芝士蜜桃乌龙茶)",
+          "price": 5.5,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "No Sugar / 无糖（0%）",
+                  "price": 0
+                },
+                {
+                  "name": "Light Sugar / 微糖（25%）",
+                  "price": 0
+                },
+                {
+                  "name": "Less Sugar / 半糖（50%）",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Boba Exchange To Brown Sugar Boba / 珍珠换黑糖脆波波",
+                  "price": 0.5
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sel_004",
+          "name": "Cheese High Mountain Tea (奶盖文青包种茶)",
+          "price": 5.5,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "No Sugar / 无糖（0%）",
+                  "price": 0
+                },
+                {
+                  "name": "Light Sugar / 微糖（25%）",
+                  "price": 0
+                },
+                {
+                  "name": "Less Sugar / 半糖（50%）",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sel_005",
+          "name": "High Mountain Cheese Tea (奶盖文青包种茶)",
+          "price": 5.5,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Boba Exchange To Brown Sugar Boba / 珍珠换黑糖脆波波",
+                  "price": 0.5
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sel_006",
+          "name": "Osmanthus Oolong Cheese Tea (奶盖桂花乌龙茶)",
+          "price": 5.5,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sel_007",
+          "name": "Wonderland Milk Tea — Mint w. Oreo Topping, Cold Only (梦游奶茶（冷）)",
+          "price": 5.99,
+          "modifiers": [
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Boba Exchange To Brown Sugar Boba / 珍珠换黑糖脆波波",
+                  "price": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sel_008",
+          "name": "Double Black Sugar Boba Milk Tea (双倍特浓黑糖脏脏茶)",
+          "price": 5.95,
+          "modifiers": [
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Boba Exchange To Brown Sugar Boba / 珍珠换黑糖脆波波",
+                  "price": 0.5
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Hot / 热",
+                  "price": 0
+                },
+                {
+                  "name": "Warm / 温热",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                },
+                {
+                  "name": "No Ice / 去冰",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "cheese_foam",
+              "name": "Add Cheese Foam (加奶盖)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Add Cheese Foam / 加奶盖",
+                  "price": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sel_009",
+          "name": "High Mountain Boba Milk Tea (文青珍奶)",
+          "price": 6.45,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "No Sugar / 无糖（0%）",
+                  "price": 0
+                },
+                {
+                  "name": "Light Sugar / 微糖（25%）",
+                  "price": 0
+                },
+                {
+                  "name": "Less Sugar / 半糖（50%）",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Boba Exchange To Brown Sugar Boba / 珍珠换黑糖脆波波",
+                  "price": 0.5
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Hot / 热",
+                  "price": 0
+                },
+                {
+                  "name": "Warm / 温热",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                },
+                {
+                  "name": "No Ice / 去冰",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sel_010",
+          "name": "Roasted Oolong Boba Milk Tea (炭焙乌龙珍奶)",
+          "price": 6.45,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "No Sugar / 无糖（0%）",
+                  "price": 0
+                },
+                {
+                  "name": "Light Sugar / 微糖（25%）",
+                  "price": 0
+                },
+                {
+                  "name": "Less Sugar / 半糖（50%）",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Boba Exchange To Brown Sugar Boba / 珍珠换黑糖脆波波",
+                  "price": 0.5
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Hot / 热",
+                  "price": 0
+                },
+                {
+                  "name": "Warm / 温热",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                },
+                {
+                  "name": "No Ice / 去冰",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "drinks",
       "name": "Drinks (饮料)",
       "items": [
-        { "id": "dr_001", "name": "Brown Sugar Boba Milk Tea (黑糖髒髒茶)", "price": 5.50, "modifiers": [] },
-        { "id": "dr_002", "name": "Boba Milk Tea (珍珠奶茶)", "price": 5.30, "modifiers": [] },
-        { "id": "dr_003", "name": "Jasmine Green Boba Milk Tea (茉香珍奶)", "price": 6.45, "modifiers": [] },
-        { "id": "dr_004", "name": "Osmanthus Oolong Orange Fruit Tea (桂馥柳橙水果茶)", "price": 5.95, "modifiers": [] },
-        { "id": "dr_005", "name": "Osmanthus Oolong Grapefruit Fruit Tea (桂馥西柚水果茶)", "price": 5.95, "modifiers": [] },
-        { "id": "dr_006", "name": "Strawberry Milk Cloud (草莓脏吸吸)", "price": 5.75, "modifiers": [] },
-        { "id": "dr_007", "name": "Mango Milk Cloud (芒果脏吸吸)", "price": 5.95, "modifiers": [] },
-        { "id": "dr_008", "name": "Hot Ginger Milk (姜汁鲜奶热饮)", "price": 8.00, "modifiers": [] },
-        { "id": "dr_009", "name": "Orange Limeade w. Chia Seeds (橙子雷夢)", "price": 5.95, "modifiers": [] },
-        { "id": "dr_010", "name": "Taro Milk Tea (芋头脏脏茶)", "price": 5.95, "modifiers": [] },
-        { "id": "dr_011", "name": "Peach Milk Cloud (水蜜桃髒吸吸)", "price": 5.95, "modifiers": [] },
-        { "id": "dr_012", "name": "Red Bean Milk Tea (红豆脏脏茶)", "price": 5.95, "modifiers": [] }
+        {
+          "id": "dr_001",
+          "name": "Hot Ginger Milk (姜汁鲜奶热饮)",
+          "price": 8,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "No Sugar / 无糖（0%）",
+                  "price": 0
+                },
+                {
+                  "name": "Light Sugar / 微糖（25%）",
+                  "price": 0
+                },
+                {
+                  "name": "Less Sugar / 半糖（50%）",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Hot / 热",
+                  "price": 0
+                },
+                {
+                  "name": "Warm / 温热",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                },
+                {
+                  "name": "No Ice / 去冰",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "milk_upgrade",
+              "name": "Milk Upgrade (牛奶升级)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Almond Milk / 升级杏仁奶",
+                  "price": 0.5
+                },
+                {
+                  "name": "Soymilk / 升级豆奶",
+                  "price": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_002",
+          "name": "Orange Limeade w. Chia Seeds (橙子雷梦)",
+          "price": 5.95,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "No Sugar / 无糖（0%）",
+                  "price": 0
+                },
+                {
+                  "name": "Light Sugar / 微糖（25%）",
+                  "price": 0
+                },
+                {
+                  "name": "Less Sugar / 半糖（50%）",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_003",
+          "name": "Taro Milk Tea (芋头脏脏茶)",
+          "price": 5.95,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Boba Exchange To Brown Sugar Boba / 珍珠换黑糖脆波波",
+                  "price": 0.5
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_004",
+          "name": "Peach Milk Cloud (水蜜桃脏吸吸)",
+          "price": 5.95,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "milk_upgrade",
+              "name": "Milk Upgrade (牛奶升级)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Almond Milk / 升级杏仁奶",
+                  "price": 0.5
+                },
+                {
+                  "name": "Soymilk / 升级豆奶",
+                  "price": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_005",
+          "name": "Red Bean Milk Tea (红豆脏脏茶)",
+          "price": 5.95,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Boba Exchange To Brown Sugar Boba / 珍珠换黑糖脆波波",
+                  "price": 0.5
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                },
+                {
+                  "name": "No Ice / 去冰",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dr_006",
+          "name": "Strawberry Milk Cloud (草莓脏吸吸)",
+          "price": 5.75,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "milk_upgrade",
+              "name": "Milk Upgrade (牛奶升级)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Almond Milk / 升级杏仁奶",
+                  "price": 0.5
+                },
+                {
+                  "name": "Soymilk / 升级豆奶",
+                  "price": 0.5
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "house_special",
       "name": "House Special (本店特色)",
       "items": [
-        { "id": "hs_001", "name": "Tsao (左宗鸡)", "price": 4.00, "modifiers": [] },
-        { "id": "hs_002", "name": "Fried Chicken Drumstick (3) (轟炸雞腿（3只）)", "price": 24.00, "modifiers": [] },
-        { "id": "hs_003", "name": "Fried Chicken Steak (炸香鸡排)", "price": 1.00, "modifiers": [] },
-        { "id": "hs_004", "name": "Braised Pork Blood Cake (2 Skewers) (卤猪血糕(2串))", "price": 3.85, "modifiers": [] },
-        { "id": "hs_005", "name": "Fried Chicken Wing (炸鸡翅)", "price": 10.95, "modifiers": [] },
-        { "id": "hs_006", "name": "Fried Green Bean (椒鹽四季豆)", "price": 4.98, "modifiers": [] },
-        { "id": "hs_007", "name": "Fried Spicy Chicken Wing (香辣炸鸡翅)", "price": 9.00, "modifiers": [] },
-        { "id": "hs_008", "name": "Fried Tempura Ball (2pcs) (甜不辣丸(2串))", "price": 4.98, "modifiers": [] },
-        { "id": "hs_009", "name": "Golden Cheese Popcorn Chicken (黃金起司鹹酥雞)", "price": 10.00, "modifiers": [] },
-        { "id": "hs_010", "name": "Grilled Chicken Steak (家乡炭烤鸡排)", "price": 9.75, "modifiers": [] },
-        { "id": "hs_011", "name": "Grilled Tofu w. Kimchi (酱烤好初泡菜豆腐)", "price": 10.00, "modifiers": [] },
-        { "id": "hs_012", "name": "Make Your Own Combo (自选组合)", "price": 39.00, "modifiers": [] },
-        { "id": "hs_013", "name": "Make Your Own Combo - Seafood (海鲜自选套餐)", "price": 39.00, "modifiers": [] },
-        { "id": "hs_014", "name": "Popcorn Chicken (招牌盐酥鸡)", "price": 8.95, "modifiers": [] },
-        { "id": "hs_015", "name": "Pork Feet (招财猪手)", "price": 9.95, "modifiers": [] },
-        { "id": "hs_016", "name": "Pork Hoofs (元宝猪手)", "price": 14.95, "modifiers": [] },
-        { "id": "hs_017", "name": "Scallion Pancake w. Egg (葱油饼加蛋)", "price": 4.50, "modifiers": [] },
-        { "id": "hs_018", "name": "Scallion Pancake w. Egg & Hot Dog (葱油饼加热狗蛋)", "price": 5.50, "modifiers": [] },
-        { "id": "hs_019", "name": "Smoke Chicken Bone 0.1lb (香薰鸡架 0.1lb)", "price": 0.99, "modifiers": [] }
+        {
+          "id": "hs_001",
+          "name": "Tsao — General Tso's Chicken (左宗鸡)",
+          "price": 4,
+          "modifiers": [
+            {
+              "id": "cup",
+              "name": "Cup Type (杯型)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Large Cup / 大杯",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "flavor",
+              "name": "Flavor (口味)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Garlic / 田园沙拉酱",
+                  "price": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_002",
+          "name": "Fried Chicken Drumstick x3 (轰炸鸡腿（3只）)",
+          "price": 24,
+          "modifiers": [
+            {
+              "id": "flavor",
+              "name": "Flavor (口味)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Garlic / 田园沙拉酱",
+                  "price": 2
+                },
+                {
+                  "name": "Black Pepper / 黑胡椒",
+                  "price": 20
+                }
+              ]
+            },
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sweet & Sour Sauce / 甜酸酱",
+                  "price": 1
+                },
+                {
+                  "name": "Ranch / 田园沙拉酱",
+                  "price": 1.5
+                },
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_003",
+          "name": "Fried Chicken Steak (炸香鸡排)",
+          "price": 1,
+          "modifiers": [
+            {
+              "id": "flavor",
+              "name": "Flavor (口味)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Garlic / 田园沙拉酱",
+                  "price": 2
+                },
+                {
+                  "name": "Black Pepper / 黑胡椒",
+                  "price": 20
+                }
+              ]
+            },
+            {
+              "id": "snacks",
+              "name": "Add Snacks (小食)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Fries / 薯条",
+                  "price": 2
+                },
+                {
+                  "name": "Chicken Finger / 鸡柳",
+                  "price": 3
+                },
+                {
+                  "name": "Egg / 炸蛋",
+                  "price": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_004",
+          "name": "Braised Pork Blood Cake — 2 Skewers (卤猪血糕（2串）)",
+          "price": 3.85,
+          "modifiers": []
+        },
+        {
+          "id": "hs_005",
+          "name": "Fried Chicken Wing (炸鸡翅)",
+          "price": 10.95,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sweet & Sour Sauce / 甜酸酱",
+                  "price": 1
+                },
+                {
+                  "name": "Ranch / 田园沙拉酱",
+                  "price": 1.5
+                },
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_006",
+          "name": "Fried Green Bean (椒盐四季豆)",
+          "price": 4.98,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sweet & Sour Sauce / 甜酸酱",
+                  "price": 1
+                },
+                {
+                  "name": "Ranch / 田园沙拉酱",
+                  "price": 1.5
+                },
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_007",
+          "name": "Fried Spicy Chicken Wing (香辣炸鸡翅)",
+          "price": 9,
+          "modifiers": []
+        },
+        {
+          "id": "hs_008",
+          "name": "Fried Tempura Ball x2 (甜不辣丸（2串）)",
+          "price": 4.98,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sweet & Sour Sauce / 甜酸酱",
+                  "price": 1
+                },
+                {
+                  "name": "Ranch / 田园沙拉酱",
+                  "price": 1.5
+                },
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_009",
+          "name": "Golden Cheese Popcorn Chicken (黄金起司咸酥鸡)",
+          "price": 10,
+          "modifiers": [
+            {
+              "id": "cheese_option",
+              "name": "Cheese Option (起司酱选项)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Cheese Sauce On The Side / 起司酱分开",
+                  "price": 0
+                },
+                {
+                  "name": "Cheese Sauce On It / 起司酱淋上",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_010",
+          "name": "Grilled Chicken Steak (家乡炭烤鸡排)",
+          "price": 9.75,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sweet & Sour Sauce / 甜酸酱",
+                  "price": 1
+                },
+                {
+                  "name": "Ranch / 田园沙拉酱",
+                  "price": 1.5
+                },
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_011",
+          "name": "Grilled Tofu w. Kimchi (酱烤好初泡菜豆腐)",
+          "price": 10,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sweet & Sour Sauce / 甜酸酱",
+                  "price": 1
+                },
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_012",
+          "name": "Make Your Own Combo (自选组合)",
+          "price": 39,
+          "modifiers": [
+            {
+              "id": "spice",
+              "name": "Spice Level (辣度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Mild / 微辣",
+                  "price": 2
+                },
+                {
+                  "name": "Medium Spicy / 中辣",
+                  "price": 2
+                },
+                {
+                  "name": "Very Spicy / 超辣",
+                  "price": 3
+                }
+              ]
+            },
+            {
+              "id": "flavor",
+              "name": "Flavor (口味)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Garlic / 田园沙拉酱",
+                  "price": 2
+                },
+                {
+                  "name": "Black Pepper / 黑胡椒",
+                  "price": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_013",
+          "name": "Make Your Own Seafood Combo (海鲜自选套餐)",
+          "price": 39,
+          "modifiers": []
+        },
+        {
+          "id": "hs_014",
+          "name": "Popcorn Chicken (招牌盐酥鸡)",
+          "price": 8.95,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sweet & Sour Sauce / 甜酸酱",
+                  "price": 1
+                },
+                {
+                  "name": "Ranch / 田园沙拉酱",
+                  "price": 1.5
+                },
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_015",
+          "name": "Pork Feet (招财猪手)",
+          "price": 9.95,
+          "modifiers": []
+        },
+        {
+          "id": "hs_016",
+          "name": "Pork Hoofs (元宝猪手)",
+          "price": 14.95,
+          "modifiers": []
+        },
+        {
+          "id": "hs_017",
+          "name": "Scallion Pancake w. Egg (葱油饼加蛋)",
+          "price": 4.5,
+          "modifiers": []
+        },
+        {
+          "id": "hs_018",
+          "name": "Scallion Pancake w. Egg & Hot Dog (葱油饼加热狗蛋)",
+          "price": 5.5,
+          "modifiers": []
+        },
+        {
+          "id": "hs_019",
+          "name": "Smoke Chicken Bone 0.1lb (香薰鸡架 0.1lb)",
+          "price": 0.99,
+          "modifiers": []
+        },
+        {
+          "id": "hs_020",
+          "name": "Strawberry Milk Cloud (草莓脏吸吸)",
+          "price": 5.75,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "milk_upgrade",
+              "name": "Milk Upgrade (牛奶升级)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Almond Milk / 升级杏仁奶",
+                  "price": 0.5
+                },
+                {
+                  "name": "Soymilk / 升级豆奶",
+                  "price": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_021",
+          "name": "Tonkotsu Ramen (豚骨拉面)",
+          "price": 17.99,
+          "modifiers": []
+        },
+        {
+          "id": "hs_022",
+          "name": "Chopped Pepper Fish Head (剁椒鱼头)",
+          "price": 20,
+          "modifiers": [
+            {
+              "id": "cup",
+              "name": "Cup Type (杯型)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Large Cup / 大杯",
+                  "price": 0
+                },
+                {
+                  "name": "Medium Cup / 中杯",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_023",
+          "name": "Hot Black Tea Latte (红茶拿铁)",
+          "price": 10,
+          "modifiers": [
+            {
+              "id": "toppings",
+              "name": "Toppings (奶茶小料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Pearl / 珍珠",
+                  "price": 1
+                },
+                {
+                  "name": "Coconut Jelly / 椰果",
+                  "price": 1
+                },
+                {
+                  "name": "Grape Pulp / 葡萄果肉",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hs_024",
+          "name": "Special Chicken Over Rice (超值鸡排饭)",
+          "price": 20,
+          "modifiers": [
+            {
+              "id": "drinks",
+              "name": "Drinks (饮料)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Juice / 果汁",
+                  "price": 0
+                },
+                {
+                  "name": "Cola / 可乐",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "side",
       "name": "Side (配菜)",
       "items": [
-        { "id": "side_001", "name": "Fried Cuttlefish Balls (2 Skewers) (炸花枝丸(2串6粒))", "price": 26.26, "modifiers": [] },
-        { "id": "side_002", "name": "French Fries (椒盐脆薯)", "price": 8.28, "modifiers": [] },
-        { "id": "side_003", "name": "Braised Bok Choy (健康烫青菜)", "price": 9.92, "modifiers": [] },
-        { "id": "side_004", "name": "Fried Sausage (3 Skewers) (炸亲亲肠(3串6粒))", "price": 6.80, "modifiers": [] },
-        { "id": "side_005", "name": "Fried Sweet Corn (2 Skewers) (炸玉米(两串))", "price": 6.80, "modifiers": [] },
-        { "id": "side_006", "name": "Grilled Fish Tofu (2 Skewers) (鱼豆腐(2串))", "price": 10.00, "modifiers": [] },
-        { "id": "side_007", "name": "Taiwan Style Fried Combo (台式炸物拼盘)", "price": 25.00, "modifiers": [] },
-        { "id": "side_008", "name": "Triple Chicken Drumstick (三只鸡腿组合)", "price": 10.45, "modifiers": [] },
-        { "id": "side_009", "name": "Fish Sticks", "price": 11.00, "modifiers": [] }
+        {
+          "id": "side_001",
+          "name": "Fried Cuttlefish Balls — 2 Skewers (炸花枝丸（2串6粒）)",
+          "price": 26.26,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sweet & Sour Sauce / 甜酸酱",
+                  "price": 1
+                },
+                {
+                  "name": "Ranch / 田园沙拉酱",
+                  "price": 1.5
+                },
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "side_002",
+          "name": "French Fries (椒盐脆薯)",
+          "price": 8.28,
+          "modifiers": []
+        },
+        {
+          "id": "side_003",
+          "name": "Braised Bok Choy (健康烫青菜)",
+          "price": 9.92,
+          "modifiers": []
+        },
+        {
+          "id": "side_004",
+          "name": "Fried Sausage — 3 Skewers (炸亲亲肠（3串6粒）)",
+          "price": 6.8,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sweet & Sour Sauce / 甜酸酱",
+                  "price": 1
+                },
+                {
+                  "name": "Ranch / 田园沙拉酱",
+                  "price": 1.5
+                },
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "side_005",
+          "name": "Fried Sweet Corn — 2 Skewers (炸玉米（两串）)",
+          "price": 6.8,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sweet & Sour Sauce / 甜酸酱",
+                  "price": 1
+                },
+                {
+                  "name": "Ranch / 田园沙拉酱",
+                  "price": 1.5
+                },
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "side_006",
+          "name": "Grilled Fish Tofu — 2 Skewers (鱼豆腐（2串）)",
+          "price": 10,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sweet & Sour Sauce / 甜酸酱",
+                  "price": 1
+                },
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "side_007",
+          "name": "Taiwan Style Fried Combo (台式炸物拼盘)",
+          "price": 25,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "side_008",
+          "name": "Triple Chicken Drumstick (三只鸡腿组合)",
+          "price": 10.45,
+          "modifiers": []
+        },
+        {
+          "id": "side_009",
+          "name": "Fish Sticks (炸鱼条 — Side)",
+          "price": 11,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "cheese_steak",
       "name": "Cheese Steak (奶酪牛排)",
       "items": [
-        { "id": "cs_001", "name": "Fish Sticks", "price": 10.00, "modifiers": [] }
+        {
+          "id": "cs_001",
+          "name": "Fish Sticks (炸鱼条 — Cheese Steak)",
+          "price": 10,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "lunch_bento",
       "name": "Lunch Bento (午餐便当)",
       "items": [
-        { "id": "bento_001", "name": "Special Chicken Over Rice (超值鸡排饭)", "price": 15.00, "modifiers": [] },
-        { "id": "bento_002", "name": "Special Pork Rib Over Rice (超值排骨铁路)", "price": 10.95, "modifiers": [] },
-        { "id": "bento_003", "name": "Taiwanese Kimchi Tofu (泡菜豆腐饭(素食))", "price": 8.95, "modifiers": [] },
-        { "id": "bento_004", "name": "Special Chicken Drumsticks Lunch Box", "price": 10.95, "modifiers": [] }
+        {
+          "id": "bento_001",
+          "name": "Special Chicken Over Rice (超值鸡排饭 — Lunch)",
+          "price": 15,
+          "modifiers": [
+            {
+              "id": "drinks",
+              "name": "Drinks (饮料)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Juice / 果汁",
+                  "price": 0
+                },
+                {
+                  "name": "Cola / 可乐",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bento_002",
+          "name": "Special Pork Rib Over Rice (超值排骨铁路)",
+          "price": 10.95,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sweet & Sour Sauce / 甜酸酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bento_003",
+          "name": "Taiwanese Kimchi Tofu (泡菜豆腐饭（素食）)",
+          "price": 8.95,
+          "modifiers": [
+            {
+              "id": "lunch_combo",
+              "name": "Lunch Combo (午餐组合)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Mango Roll / 芒果卷",
+                  "price": 3
+                },
+                {
+                  "name": "Spicy Tuna / 辣吞拿卷",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bento_004",
+          "name": "Special Chicken Drumsticks Lunch Box",
+          "price": 10.95,
+          "modifiers": [
+            {
+              "id": "lunch_combo",
+              "name": "Lunch Combo (午餐组合)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Mango Roll / 芒果卷",
+                  "price": 3
+                },
+                {
+                  "name": "Spicy Tuna / 辣吞拿卷",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bento_005",
+          "name": "Hot Black Tea Latte (红茶拿铁 — Lunch)",
+          "price": 10,
+          "modifiers": [
+            {
+              "id": "toppings",
+              "name": "Toppings (奶茶小料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Pearl / 珍珠",
+                  "price": 1
+                },
+                {
+                  "name": "Coconut Jelly / 椰果",
+                  "price": 1
+                },
+                {
+                  "name": "Grape Pulp / 葡萄果肉",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "rice_bowl",
       "name": "Rice Bowl (饭)",
       "items": [
-        { "id": "rice_001", "name": "Special Braised Sliced Pork Belly Over Rice (超值焢肉飯)", "price": 11.95, "modifiers": [] },
-        { "id": "rice_002", "name": "Kimchi Tofu Rice (泡菜豆腐飯)", "price": 8.95, "modifiers": [] },
-        { "id": "rice_003", "name": "Braised Sliced Pork Belly Over Rice (焢肉饭)", "price": 9.75, "modifiers": [] },
-        { "id": "rice_004", "name": "White Rice (白飯)", "price": 0.99, "modifiers": [] }
+        {
+          "id": "rice_001",
+          "name": "Special Braised Sliced Pork Belly Over Rice (超值焢肉饭)",
+          "price": 11.95,
+          "modifiers": [
+            {
+              "id": "lunch_combo",
+              "name": "Lunch Combo (午餐组合)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Mango Roll / 芒果卷",
+                  "price": 3
+                },
+                {
+                  "name": "Spicy Tuna / 辣吞拿卷",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rice_002",
+          "name": "Kimchi Tofu Rice (泡菜豆腐饭)",
+          "price": 8.95,
+          "modifiers": []
+        },
+        {
+          "id": "rice_003",
+          "name": "Braised Sliced Pork Belly Over Rice (焢肉饭)",
+          "price": 9.75,
+          "modifiers": []
+        },
+        {
+          "id": "rice_004",
+          "name": "White Rice (白饭)",
+          "price": 0.99,
+          "modifiers": []
+        },
+        {
+          "id": "rice_005",
+          "name": "Tsao — General Tso's Chicken (左宗鸡 — Rice Bowl)",
+          "price": 4,
+          "modifiers": [
+            {
+              "id": "cup",
+              "name": "Cup Type (杯型)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Large Cup / 大杯",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "flavor",
+              "name": "Flavor (口味)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Garlic / 田园沙拉酱",
+                  "price": 2
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "noodles",
       "name": "Noodles (面)",
       "items": [
-        { "id": "noodle_001", "name": "Taiwanese Cold Noodle w. Chicken Steak (豪華雞排涼麵)", "price": 5.00, "modifiers": [] }
+        {
+          "id": "noodle_001",
+          "name": "Taiwanese Cold Noodle w. Chicken Steak (豪华鸡排凉面)",
+          "price": 5,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "noodle_002",
+          "name": "Tsao — General Tso's Chicken (左宗鸡 — Noodles)",
+          "price": 4,
+          "modifiers": [
+            {
+              "id": "cup",
+              "name": "Cup Type (杯型)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Large Cup / 大杯",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "flavor",
+              "name": "Flavor (口味)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Garlic / 田园沙拉酱",
+                  "price": 2
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "burger",
       "name": "Burger (汉堡)",
       "items": [
-        { "id": "burg_001", "name": "HJ Signature Double Chicken Drumsticks Sandwich (招牌双层鸡腿堡)", "price": 11.95, "modifiers": [] },
-        { "id": "burg_002", "name": "Sandwich (汉堡)", "price": 4.00, "modifiers": [] },
-        { "id": "burg_003", "name": "HJ Signature Chicken Sandwich", "price": 9.95, "modifiers": [] },
-        { "id": "burg_004", "name": "Special Braised Sliced Pork Belly Over Rice (超值焢肉飯)", "price": 10.00, "modifiers": [] }
+        {
+          "id": "burg_001",
+          "name": "HJ Signature Double Chicken Drumsticks Sandwich (招牌双层鸡腿堡)",
+          "price": 11.95,
+          "modifiers": [
+            {
+              "id": "flavor",
+              "name": "Flavor (口味)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Garlic / 田园沙拉酱",
+                  "price": 2
+                },
+                {
+                  "name": "Black Pepper / 黑胡椒",
+                  "price": 20
+                }
+              ]
+            },
+            {
+              "id": "lunch_combo",
+              "name": "Lunch Combo (午餐组合)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Mango Roll / 芒果卷",
+                  "price": 3
+                },
+                {
+                  "name": "Spicy Tuna / 辣吞拿卷",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "burg_002",
+          "name": "Sandwich (汉堡)",
+          "price": 4,
+          "modifiers": [
+            {
+              "id": "flavor",
+              "name": "Flavor (口味)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Garlic / 田园沙拉酱",
+                  "price": 2
+                },
+                {
+                  "name": "Black Pepper / 黑胡椒",
+                  "price": 20
+                }
+              ]
+            },
+            {
+              "id": "lunch_combo",
+              "name": "Lunch Combo (午餐组合)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Mango Roll / 芒果卷",
+                  "price": 3
+                },
+                {
+                  "name": "Spicy Tuna / 辣吞拿卷",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "burg_003",
+          "name": "Tsao — General Tso's Chicken (左宗鸡 — Burger)",
+          "price": 0,
+          "modifiers": [
+            {
+              "id": "cup",
+              "name": "Cup Type (杯型)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Large Cup / 大杯",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "flavor",
+              "name": "Flavor (口味)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Garlic / 田园沙拉酱",
+                  "price": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "burg_004",
+          "name": "HJ Signature Chicken Sandwich (招牌鸡腿堡)",
+          "price": 9.95,
+          "modifiers": [
+            {
+              "id": "flavor",
+              "name": "Flavor (口味)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Garlic / 田园沙拉酱",
+                  "price": 2
+                },
+                {
+                  "name": "Black Pepper / 黑胡椒",
+                  "price": 20
+                }
+              ]
+            },
+            {
+              "id": "lunch_combo",
+              "name": "Lunch Combo (午餐组合)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Mango Roll / 芒果卷",
+                  "price": 3
+                },
+                {
+                  "name": "Spicy Tuna / 辣吞拿卷",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "burg_005",
+          "name": "Special Braised Sliced Pork Belly Over Rice (超值焢肉饭 — Burger)",
+          "price": 10,
+          "modifiers": [
+            {
+              "id": "lunch_combo",
+              "name": "Lunch Combo (午餐组合)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Mango Roll / 芒果卷",
+                  "price": 3
+                },
+                {
+                  "name": "Spicy Tuna / 辣吞拿卷",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "hot_pot",
       "name": "Hot Pot (火锅)",
       "items": [
-        { "id": "hp_001", "name": "Double Flavors Broth Pot (鸳鸯锅)", "price": 14.99, "modifiers": [] },
-        { "id": "hp_002", "name": "Grilled Chicken Wing (炭烤鸡翅)", "price": 3.00, "modifiers": [] },
-        { "id": "hp_003", "name": "Grilled Taiwanese Sausage (2 Skewers) (炭烤台式香肠(2串))", "price": 33.00, "modifiers": [] }
+        {
+          "id": "hp_001",
+          "name": "Double Flavors Broth Pot (鸳鸯锅)",
+          "price": 14.99,
+          "modifiers": [
+            {
+              "id": "broth",
+              "name": "Double Flavor Broth (鸳鸯锅底选择)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Traditional Spicy Broth / 九门特色红油锅",
+                  "price": 0
+                },
+                {
+                  "name": "Tomato Broth / 番茄浓汤锅",
+                  "price": 0
+                },
+                {
+                  "name": "Spicy Tomato Broth / 山丹丹花开红艳艳",
+                  "price": 0
+                },
+                {
+                  "name": "Mushroom Broth / 养生菌菇汤锅",
+                  "price": 0
+                },
+                {
+                  "name": "Bone Marrow Broth / 原汁招牌大骨锅",
+                  "price": 0
+                },
+                {
+                  "name": "Nourishing Chicken Broth / 滋补乌鸡锅",
+                  "price": 0
+                },
+                {
+                  "name": "Pigs Trotters w. Yellow Bean Broth / 养颜蹄花锅",
+                  "price": 0
+                },
+                {
+                  "name": "Fish Maw w. Shredded Chicken Broth / 金汤花椒鸡",
+                  "price": 10.88
+                }
+              ]
+            },
+            {
+              "id": "broth_spice_traditional",
+              "name": "Spice Level for Traditional Spicy (牛油辣度)",
+              "required": false,
+              "options": [
+                {
+                  "name": "No Spicy / 不要辣（牛油）",
+                  "price": 0
+                },
+                {
+                  "name": "Tiny Spicy / 微辣（牛油）",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Spicy / 中辣（牛油）",
+                  "price": 0
+                },
+                {
+                  "name": "Very Spicy / 重辣（牛油）",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "broth_spice_tomato",
+              "name": "Spice Level for Spicy Tomato (山丹丹辣度)",
+              "required": false,
+              "options": [
+                {
+                  "name": "No Spicy / 不要辣（山丹丹）",
+                  "price": 0
+                },
+                {
+                  "name": "Tiny Spicy / 微辣（山丹丹）",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Spicy / 中辣（山丹丹）",
+                  "price": 0
+                },
+                {
+                  "name": "Very Spicy / 重辣（山丹丹）",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hp_002",
+          "name": "Tsao — General Tso's Chicken (左宗鸡 — Hot Pot)",
+          "price": 4,
+          "modifiers": [
+            {
+              "id": "cup",
+              "name": "Cup Type (杯型)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Large Cup / 大杯",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "flavor",
+              "name": "Flavor (口味)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Garlic / 田园沙拉酱",
+                  "price": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hp_003",
+          "name": "Grilled Chicken Wing (炭烤鸡翅)",
+          "price": 3,
+          "modifiers": []
+        },
+        {
+          "id": "hp_004",
+          "name": "Grilled Taiwanese Sausage — 2 Skewers (炭烤台式香肠（2串）)",
+          "price": 33,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "buffet",
       "name": "Buffet (自助餐)",
       "items": [
-        { "id": "buf_001", "name": "Adult Lunch (成人午餐)", "price": 9.99, "modifiers": [] },
-        { "id": "buf_002", "name": "Adult Dinner (成人晚餐)", "price": 15.99, "modifiers": [] },
-        { "id": "buf_003", "name": "Kids Lunch 2-12 Yrs (儿童午餐)", "price": 5.99, "modifiers": [] },
-        { "id": "buf_004", "name": "Kids Dinner 2-12 Yrs (儿童晚餐)", "price": 11.99, "modifiers": [] }
+        {
+          "id": "buf_001",
+          "name": "Adult Lunch (成人午餐)",
+          "price": 9.99,
+          "modifiers": []
+        },
+        {
+          "id": "buf_002",
+          "name": "Adult Dinner (成人晚餐)",
+          "price": 15.99,
+          "modifiers": []
+        },
+        {
+          "id": "buf_003",
+          "name": "Kids Lunch — Ages 2-12 (儿童午餐（2-12岁）)",
+          "price": 5.99,
+          "modifiers": []
+        },
+        {
+          "id": "buf_004",
+          "name": "Kids Dinner — Ages 2-12 (儿童晚餐（2-12岁）)",
+          "price": 11.99,
+          "modifiers": []
+        }
       ]
     },
     {
       "id": "new_milk_tea",
       "name": "New Milk Tea",
       "items": [
-        { "id": "nmt_001", "name": "Milk Tea Boba", "price": 5.30, "modifiers": [] }
+        {
+          "id": "nmt_001",
+          "name": "Milk Tea Boba (珍珠奶茶)",
+          "price": 5.3,
+          "modifiers": [
+            {
+              "id": "sugar",
+              "name": "Sugar Level (甜度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "No Sugar / 无糖（0%）",
+                  "price": 0
+                },
+                {
+                  "name": "Light Sugar / 微糖（25%）",
+                  "price": 0
+                },
+                {
+                  "name": "Less Sugar / 半糖（50%）",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Sugar / 正常糖（100%）",
+                  "price": 0
+                },
+                {
+                  "name": "More Sugar / 多糖（120%）",
+                  "price": 1
+                }
+              ]
+            },
+            {
+              "id": "toppings",
+              "name": "Toppings (加料)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Milk Cap Instead Of Boba / 珍珠换奶盖",
+                  "price": 0.75
+                },
+                {
+                  "name": "Tapioca Boba / 珍珠",
+                  "price": 0.6
+                },
+                {
+                  "name": "Pudding / 布丁",
+                  "price": 0.5
+                },
+                {
+                  "name": "Sweet Red Bean / 台湾红豆泥",
+                  "price": 0.5
+                },
+                {
+                  "name": "Mango Juicy Pearls / 芒果爆珠",
+                  "price": 0.75
+                },
+                {
+                  "name": "Mango Jelly / 芒果椰果",
+                  "price": 0.44
+                },
+                {
+                  "name": "Coffee Jelly / 咖啡椰果",
+                  "price": 0.66
+                },
+                {
+                  "name": "Mango Konnyaku Jelly / 芒果脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Black Sugar Konnyaku Jelly / 黑糖脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Konnyaku Jelly / 原味脆波波",
+                  "price": 0.75
+                },
+                {
+                  "name": "Boba Exchange To Brown Sugar Boba / 珍珠换黑糖脆波波",
+                  "price": 0.5
+                }
+              ]
+            },
+            {
+              "id": "ice",
+              "name": "Ice Level (冰度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Hot / 热",
+                  "price": 0
+                },
+                {
+                  "name": "Warm / 温热",
+                  "price": 0
+                },
+                {
+                  "name": "Regular Ice / 正常冰",
+                  "price": 0
+                },
+                {
+                  "name": "Less Ice / 少冰",
+                  "price": 0
+                },
+                {
+                  "name": "No Ice / 去冰",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "pho",
       "name": "Phở",
       "items": [
-        { "id": "pho_001", "name": "Pho 1.tai (pho tai)", "price": 15.00, "modifiers": [] }
+        {
+          "id": "pho_001",
+          "name": "Pho Tai (牛肉河粉)",
+          "price": 15,
+          "modifiers": [
+            {
+              "id": "pho_option",
+              "name": "Pho Option",
+              "required": false,
+              "options": [
+                {
+                  "name": "Extra Tai / 加牛肉",
+                  "price": 2
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "appetizers",
       "name": "Appetizers (前菜)",
       "items": [
-        { "id": "app_001", "name": "Fish Sticks", "price": 8.00, "modifiers": [] },
-        { "id": "app_002", "name": "Street Corn (street corn)", "price": 10.00, "modifiers": [] }
+        {
+          "id": "app_001",
+          "name": "Fish Sticks (炸鱼条 — Appetizer)",
+          "price": 8,
+          "modifiers": []
+        },
+        {
+          "id": "app_002",
+          "name": "Street Corn (烤玉米)",
+          "price": 10,
+          "modifiers": [
+            {
+              "id": "sauce",
+              "name": "Sauce (酱料)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Butter",
+                  "price": 0
+                },
+                {
+                  "name": "Cajun",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "id": "sauce",
+              "name": "Add Sauce (加酱汁)",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sweet & Sour Sauce / 甜酸酱",
+                  "price": 1
+                },
+                {
+                  "name": "Ranch / 田园沙拉酱",
+                  "price": 1.5
+                },
+                {
+                  "name": "HJ Spicy Sauce / HJ辣酱",
+                  "price": 1
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "loyalty",
-      "name": "Loyalty points (积分专区)",
+      "name": "Loyalty Points (积分专区)",
       "items": [
-        { "id": "lp_001", "name": "Mochi Milk Tea (麻薯奶茶)", "price": 6.66, "modifiers": [] }
+        {
+          "id": "lp_001",
+          "name": "Mochi Milk Tea (麻薯奶茶)",
+          "price": 6.66,
+          "modifiers": [
+            {
+              "id": "drinks",
+              "name": "Drinks (饮料)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Juice / 果汁",
+                  "price": 0
+                },
+                {
+                  "name": "Cola / 可乐",
+                  "price": 0
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "id": "ayce_dishes",
       "name": "AYCE Dishes (自助餐菜品)",
       "items": [
-        { "id": "ayce_001", "name": "Dish A (菜品 A)", "price": 0.00, "modifiers": [] },
-        { "id": "ayce_002", "name": "Open (开价)", "price": 0.00, "modifiers": [] }
-      ]
-    },
-    {
-      "id": "specials",
-      "name": "Specials",
-      "items": [
-        { "id": "spec_001", "name": "Tonkotsu Ramen (豚骨拉面)", "price": 17.99, "modifiers": [] },
-        { "id": "spec_002", "name": "Chopped Pepper Fish Head (剁椒鱼头)", "price": 20.00, "modifiers": [] },
-        { "id": "spec_003", "name": "Special Chicken Over Rice (超值鸡排饭)", "price": 20.00, "modifiers": [] }
+        {
+          "id": "ayce_001",
+          "name": "Dish A (菜品A)",
+          "price": 0,
+          "modifiers": [
+            {
+              "id": "spice",
+              "name": "Spice Level (辣度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Mild / 微辣",
+                  "price": 0
+                },
+                {
+                  "name": "Medium Spicy / 中辣",
+                  "price": 2
+                },
+                {
+                  "name": "Very Spicy / 超辣",
+                  "price": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ayce_002",
+          "name": "Open (开价)",
+          "price": 0,
+          "modifiers": [
+            {
+              "id": "spice",
+              "name": "Spice Level (辣度)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Mild / 微辣",
+                  "price": 0
+                },
+                {
+                  "name": "Very Spicy / 超辣",
+                  "price": 3
+                }
+              ]
+            },
+            {
+              "id": "flavor",
+              "name": "Flavor (口味)",
+              "required": true,
+              "options": [
+                {
+                  "name": "Garlic / 田园沙拉酱",
+                  "price": 2
+                }
+              ]
+            }
+          ]
+        }
       ]
     }
   ]
